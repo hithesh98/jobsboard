@@ -29,3 +29,10 @@ body{
     font-size: 18px;
 
 }
+
+.wireframe-browser {
+    position: absolute;
+    right: 120px;
+    top: 159px;
+    z-index: 10;
+}

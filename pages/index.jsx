@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <h1 className="header">The worlds largest community for healthcare and lifesciences startup jobs</h1>
         <h3 className="subtitle">Find a job doing important work. Sign-up below to get notifications for jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
       </div>  
-
+      <Image className="wireframe-browser" src="/Browser.svg" width="702.96px" height="466.47px"/>
       </main>
     </div>
   )
