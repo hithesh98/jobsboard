@@ -16,8 +16,21 @@ export default function Home() {
       <div className="copy-wrapper"> 
         <h1 className="header">The worlds largest community for healthcare and lifesciences startup jobs</h1>
         <h3 className="subtitle">Find a job doing important work. Sign-up below to get notifications for jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
-      </div>  
-      <Image className="wireframe-browser" src="/Browser.svg" width="702.96px" height="466.47px"/>
+      </div> 
+      <div className="wireframe-browser">
+        <div className="browser">
+          <Image src="/Browser.svg" width="702.96px" height="466.47px"/>
+        </div>
+        <div className="list1">
+          <Image src="/list.svg" width="399.69" height="60.47"/>
+        </div>
+        <div className="list2">
+          <Image src="/list.svg" width="399.69" height="60.47"/>
+        </div>
+        <div className="list3">
+          <Image src="/list.svg" width="399.69" height="60.47"/>
+        </div>
+      </div> 
       </main>
     </div>
   )
