@@ -1,4 +1,4 @@
-body{
+html {
     color: rgb(85, 85, 85);
     text-align: center;
     font-family: 'PT Sans', sans-serif;
@@ -6,10 +6,15 @@ body{
     background-size: cover;
 }
 
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
 .copy-wrapper {
-    position: absolute;
-    top: 298px;
-    left: 118px;
+    position: relative;
+    align-self: center;
 }
 
 .header {
@@ -31,9 +36,7 @@ body{
 }
 
 .wireframe-browser {
-    position: absolute;
-    right: 120px;
-    top: 159px;
+    position: relative;
     z-index: 10;
     padding: 0;
     margin: 0;
@@ -62,7 +65,7 @@ body{
     left: 199px;
     animation: fadeInUp 1s;
     animation-fill-mode: backwards;
-    animation-delay: 0.5s;
+    animation-delay: 1s;
 }
 .list2 {
     position: absolute;
@@ -70,7 +73,7 @@ body{
     left: 199px;
     animation: fadeInUp 1s;
     animation-fill-mode: backwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 .list3 {
     position: absolute;
@@ -78,5 +81,5 @@ body{
     left: 199px;
     animation: fadeInUp 1s;
     animation-fill-mode: backwards;
-    animation-delay: 1.5s;
+    animation-delay: 2s;
 }
