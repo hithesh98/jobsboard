@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Health Jobs</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -172,6 +172,16 @@ export default function Home() {
               </svg>
             </div>
           </article> 
+        </section>
+        <section className="email-wrapper">
+          <div id="mc_embed_signup">
+            <form action="https://maverickmails.us7.list-manage.com/subscribe/post?u=d89e22a8f85242651f3e1787e&amp;id=6b8ab6837b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required/>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"/></div>
+                </div>
+            </form>
+          </div>
         </section>
       </main>
     </div>
