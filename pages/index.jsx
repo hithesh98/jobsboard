@@ -46,12 +46,12 @@ export default function Home() {
                 <g id="Top bar">
                 <g id="Rectangle 2" filter="url(#filter1_bdi)">
                 <path d="M55.04 85C55.04 68.4315 68.4715 55 85.04 55H728C744.569 55 758 68.4315 758 85V97H55.04V85Z" fill="url(#paint2_linear)"/>
-                <path d="M55.54 85C55.54 68.7076 68.7476 55.5 85.04 55.5H728C744.293 55.5 757.5 68.7076 757.5 85V96.5H55.54V85Z" stroke="white" stroke-opacity="0.6"/>
+                <path d="M55.54 85C55.54 68.7076 68.7476 55.5 85.04 55.5H728C744.293 55.5 757.5 68.7076 757.5 85V96.5H55.54V85Z" stroke="white" strokeOpacity="0.6"/>
                 </g>
                 <g id="Group 13">
                 <g id="Rectangle 3" filter="url(#filter2_di)">
                 <path d="M163.665 76.1694C163.665 70.7817 168.032 66.4141 173.42 66.4141H709.505C714.892 66.4141 719.26 70.7817 719.26 76.1694C719.26 81.5572 714.892 85.9248 709.505 85.9248H173.42C168.032 85.9248 163.665 81.5572 163.665 76.1694Z" fill="url(#paint3_linear)"/>
-                <path d="M164.165 76.1694C164.165 71.0578 168.309 66.9141 173.42 66.9141H709.505C714.616 66.9141 718.76 71.0578 718.76 76.1694C718.76 81.281 714.616 85.4248 709.505 85.4248H173.42C168.309 85.4248 164.165 81.281 164.165 76.1694Z" stroke="white" stroke-opacity="0.6"/>
+                <path d="M164.165 76.1694C164.165 71.0578 168.309 66.9141 173.42 66.9141H709.505C714.616 66.9141 718.76 71.0578 718.76 76.1694C718.76 81.281 714.616 85.4248 709.505 85.4248H173.42C168.309 85.4248 164.165 81.281 164.165 76.1694Z" stroke="white" strokeOpacity="0.6"/>
                 </g>
                 </g>
                 </g>
@@ -67,7 +67,7 @@ export default function Home() {
                 </g>
                 <g id="list1">
                 <g id="Component 1">
-                <rect id="Rectangle 5_3" x="242" y="249.494" width="399.688" height="60.4729" rx="25" fill="#F4F4F4" fill-opacity="0.6"/>
+                <rect id="Rectangle 5_3" x="242" y="249.494" width="399.688" height="60.4729" rx="25" fill="#F4F4F4" fillOpacity="0.6"/>
                 <rect id="Rectangle 9" x="257.119" y="260.832" width="39.6854" height="39.6854" rx="19.8427" fill="#F4F4F4"/>
                 <rect id="Rectangle 6_2" x="311.922" y="290.124" width="152.127" height="6.61423" rx="3.30711" fill="#F4F4F4"/>
                 <g id="Rectangle 7_2">
@@ -79,7 +79,7 @@ export default function Home() {
                 </g>
                 <g id="list2">
                 <g id="list2_2">
-                <rect id="Rectangle 5_4" x="242" y="340.494" width="399.688" height="60.4729" rx="25" fill="#F4F4F4" fill-opacity="0.6"/>
+                <rect id="Rectangle 5_4" x="242" y="340.494" width="399.688" height="60.4729" rx="25" fill="#F4F4F4" fillOpacity="0.6"/>
                 <rect id="Rectangle 9_2" x="257.119" y="351.832" width="39.6854" height="39.6854" rx="19.8427" fill="#F4F4F4"/>
                 <rect id="Rectangle 6_3" x="311.922" y="381.124" width="152.127" height="6.61423" rx="3.30711" fill="#F4F4F4"/>
                 <g id="Rectangle 7_3">
@@ -91,7 +91,7 @@ export default function Home() {
                 </g>
                 <g id="list3">
                 <g id="Component 3">
-                <rect id="Rectangle 5_5" x="242" y="431.494" width="399.688" height="60.4729" rx="25" fill="#F4F4F4" fill-opacity="0.6"/>
+                <rect id="Rectangle 5_5" x="242" y="431.494" width="399.688" height="60.4729" rx="25" fill="#F4F4F4" fillOpacity="0.6"/>
                 <rect id="Rectangle 9_3" x="257.119" y="442.832" width="39.6854" height="39.6854" rx="19.8427" fill="#F4F4F4"/>
                 <rect id="Rectangle 6_4" x="311.922" y="472.124" width="152.127" height="6.61423" rx="3.30711" fill="#F4F4F4"/>
                 <g id="Rectangle 7_4">
@@ -103,8 +103,8 @@ export default function Home() {
                 </g>
                 </g>
                 <defs>
-                <filter id="filter0_bdi" x="0" y="42" width="813" height="534" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter0_bdi" x="0" y="42" width="813" height="534" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feGaussianBlur in="BackgroundImage" stdDeviation="25"/>
                 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
@@ -120,8 +120,8 @@ export default function Home() {
                 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
                 <feBlend mode="normal" in2="shape" result="effect3_innerShadow"/>
                 </filter>
-                <filter id="filter1_bdi" x="-402.96" y="-403" width="1618.96" height="958" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter1_bdi" x="-402.96" y="-403" width="1618.96" height="958" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feGaussianBlur in="BackgroundImage" stdDeviation="229"/>
                 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
@@ -137,8 +137,8 @@ export default function Home() {
                 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
                 <feBlend mode="normal" in2="shape" result="effect3_innerShadow"/>
                 </filter>
-                <filter id="filter2_di" x="108.665" y="11.4141" width="665.595" height="129.511" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <filter id="filter2_di" x="108.665" y="11.4141" width="665.595" height="129.511" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                 <feOffset/>
                 <feGaussianBlur stdDeviation="27.5"/>
@@ -153,32 +153,32 @@ export default function Home() {
                 <feBlend mode="normal" in2="shape" result="effect2_innerShadow"/>
                 </filter>
                 <linearGradient id="paint0_linear" x1="751" y1="516.022" x2="108.816" y2="51.024" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EFEFEF" stop-opacity="0.1"/>
-                <stop offset="1" stop-color="#474747" stop-opacity="0.6"/>
+                <stop stopColor="#EFEFEF" stopOpacity="0.1"/>
+                <stop offset="1" stopColor="#474747" stopOpacity="0.6"/>
                 </linearGradient>
                 <linearGradient id="paint1_linear" x1="64.9608" y1="108.356" x2="717.994" y2="568.685" gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" stop-opacity="0.6"/>
-                <stop offset="1" stop-color="white" stop-opacity="0.1"/>
+                <stop stopColor="white" stopOpacity="0.6"/>
+                <stop offset="1" stopColor="white" stopOpacity="0.1"/>
                 </linearGradient>
                 <linearGradient id="paint2_linear" x1="751" y1="96.5069" x2="733.016" y2="-34.9456" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EFEFEF" stop-opacity="0.1"/>
-                <stop offset="1" stop-color="#474747" stop-opacity="0.6"/>
+                <stop stopColor="#EFEFEF" stopOpacity="0.1"/>
+                <stop offset="1" stopColor="#474747" stopOpacity="0.6"/>
                 </linearGradient>
                 <linearGradient id="paint3_linear" x1="713.727" y1="85.6957" x2="708.757" y2="23.8873" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EFEFEF" stop-opacity="0.1"/>
-                <stop offset="1" stop-color="#474747" stop-opacity="0.6"/>
+                <stop stopColor="#EFEFEF" stopOpacity="0.1"/>
+                <stop offset="1" stopColor="#474747" stopOpacity="0.6"/>
                 </linearGradient>
                 </defs>
-              </svg>
+            </svg>
             </div>
           </article> 
         </section>
         <section className="email-wrapper">
           <div id="mc_embed_signup">
-            <form action="https://maverickmails.us7.list-manage.com/subscribe/post?u=d89e22a8f85242651f3e1787e&amp;id=6b8ab6837b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <form action="https://maverickmails.us7.list-manage.com/subscribe/post?u=d89e22a8f85242651f3e1787e&amp;id=6b8ab6837b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
-                  <input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required/>
-                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"/></div>
+                  <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required/>
+                  <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
                 </div>
             </form>
           </div>

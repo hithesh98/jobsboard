@@ -3,16 +3,19 @@ html {
     text-align: center;
     font-family: 'PT Sans', sans-serif;
     background: url("herobackground.svg") no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: top right;
     margin: 0;
     padding: 0;
+    background-color: #f5f1e9;
 }
 
 .hero-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+    margin-top: 10vh;
     flex-wrap: wrap;
+    padding: 1em;
 }
 
 .copy-wrapper {
@@ -47,14 +50,16 @@ html {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-basis: 60%;
 }
 
 .browser {
-    min-width: 613px;
     max-width: 813px;
+    flex-basis: 100%;
 }
 #wireframe {
     animation: fadeInUp 1s;
+    opacity: 3.5;
 }
 
 
@@ -90,4 +95,10 @@ html {
 #mc_embed_signup_scroll {
     display: flex;
     justify-content: center;
+    background: linear-gradient(45deg, rgba(146,142,142,0.20818749863226538) 0%, rgba(149,144,144,0.2137897395286239) 100%);
+    padding: 1.5em;
+    width: 50%;
+    margin: 0 auto;
+    min-width: 250px;
+    border-radius: 15px;
 }
