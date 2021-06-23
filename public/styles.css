@@ -13,7 +13,6 @@ html {
 .hero-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
     flex-wrap: wrap;
     padding: 1em;
 }
@@ -125,4 +124,9 @@ html {
     color: #5E5E5E;
     width: 100%;
     cursor: pointer;
+}
+.logo-wrapper {
+    max-width: 150px;
+    padding-left: 20px;
+    padding-top: 20px;
 }

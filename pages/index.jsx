@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import logo from '../public/Logo.png'
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"/>
       </Head>
       <main>
+        <section className="logo-wrapper">
+          <Image src={logo} alt="Jobsinhealthtech logo"/>
+        </section>
         <section className="hero-wrapper">
           <article className="copy-wrapper"> 
             <h1 className="header">The worlds largest community for healthcare and lifesciences startup jobs</h1>
@@ -175,7 +179,7 @@ export default function Home() {
         </section>
         <section className="email-wrapper">
           <div id="mc_embed_signup">
-            <form action="https://maverickmails.us7.list-manage.com/subscribe/post?u=d89e22a8f85242651f3e1787e&amp;id=6b8ab6837b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+            <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
                   <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Email Address" required/>
                   <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
