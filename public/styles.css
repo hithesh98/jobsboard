@@ -21,15 +21,14 @@ html {
 .copy-wrapper {
     position: relative;
     align-self: center;
+    max-width: 500px;
 
 }
 
 .header {
     color: #9F477C;
-    width: 474px;
-    height: 137px;
     line-height: 47px;
-    font-size: 36px;
+    font-size: 2em;
     font-style: normal;
     font-weight: normal;
     -webkit-text-stroke-width: 1px;
@@ -37,10 +36,9 @@ html {
 }
 
 .subtitle {
-    width: 474px;
     line-height: 25px;
     color: #0D0D0D;
-    font-size: 18px;
+    font-size: 1em;
 
 }
 
@@ -96,9 +94,35 @@ html {
     display: flex;
     justify-content: center;
     background: linear-gradient(45deg, rgba(146,142,142,0.20818749863226538) 0%, rgba(149,144,144,0.2137897395286239) 100%);
-    padding: 1.5em;
+    padding: 1em;
     width: 50%;
     margin: 0 auto;
-    min-width: 250px;
     border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+#mce-EMAIL {
+    width: 75%;
+    padding: 10px;
+    border-radius: 4px;
+    border-color: #C4C4C4;
+    margin: 5px;
+    background-color: #C4C4C4;
+    border: none;
+    max-width: 491px;
+}
+.clear {
+    align-self: center;
+    padding: 5px;
+    width: 25%;
+    min-width: 100px
+}
+#mc-embedded-subscribe {
+    background-color: #c4c4c4;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #5E5E5E;
+    width: 100%;
+    cursor: pointer;
 }

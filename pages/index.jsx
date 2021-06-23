@@ -177,7 +177,7 @@ export default function Home() {
           <div id="mc_embed_signup">
             <form action="https://maverickmails.us7.list-manage.com/subscribe/post?u=d89e22a8f85242651f3e1787e&amp;id=6b8ab6837b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
-                  <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required/>
+                  <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="Email Address" required/>
                   <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
                 </div>
             </form>
