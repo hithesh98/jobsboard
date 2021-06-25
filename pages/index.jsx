@@ -11,6 +11,7 @@ export default function Home() {
         <link rel="stylesheet" href="/styles.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"/>
+        <meta name="description" content="Find health tech jobs at innovative startup companies."/>
       </Head>
       <main>
         <section className="logo-wrapper">
