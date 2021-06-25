@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Health Jobs</title>
+        <title>HealthTech Jobs</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -15,6 +15,7 @@ export default function Home() {
       <main>
         <section className="logo-wrapper">
           <Image src={logo} alt="Jobsinhealthtech logo"/>
+          <div className="logo-name">JobsinHealthTech.com</div>
         </section>
         <section className="hero-wrapper">
           <article className="copy-wrapper"> 
