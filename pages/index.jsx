@@ -20,7 +20,7 @@ export default function Home() {
         </section>
         <section className="hero-wrapper">
           <article className="copy-wrapper"> 
-            <h1 className="header">The worlds largest community for healthcare and lifesciences startup jobs</h1>
+            <h1 className="header">The worlds leading community for healthcare and lifesciences startup jobs</h1>
             <h3 className="subtitle">Find a job doing important work. Sign-up below to get notifications for jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
           </article> 
           <article className="wireframe-browser">
