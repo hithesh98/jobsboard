@@ -6,7 +6,8 @@ export default function confirmation() {
     return (
         <Layout>
             <div>
-                hello
+                <h2>Thank you for subscribing.</h2>
+                <h3>Make sure you to move our emails to the main inbox if they go to spam.</h3>
             </div>
         </Layout>
     )

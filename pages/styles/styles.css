@@ -1,0 +1,18 @@
+html, body {
+    color: rgb(85, 85, 85);
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1e9;
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    color: rgb(85, 85, 85);
+}
+.logoWrapper {
+    max-width: 140px;
+    padding: 20px;
+}
