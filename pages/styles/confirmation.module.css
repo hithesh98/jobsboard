@@ -8,6 +8,8 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 1rem;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .confetti {
