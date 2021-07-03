@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import logo from '../public/Logo.png'
 import styles from './styles/home.module.css'
 import Layout from './components/Layout'
 
@@ -19,7 +17,7 @@ export default function Home() {
             <section className={styles.heroWrapper}>
               <article className={styles.copyWrapper}> 
                 <h1 className={styles.header}>The world&apos;s leading community for healthcare and lifesciences startup jobs</h1>
-                <h3 className={styles.subtitle}>Find a job doing important work. Sign-up below to get notifications for jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
+                <h3>Find a job doing important work. Sign-up below to get notifications for jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
               </article> 
               <article className={styles.wireframeBrowser}>
                 <div className={styles.browser}>

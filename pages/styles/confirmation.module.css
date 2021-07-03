@@ -1,0 +1,15 @@
+.heading {
+    color: #0D0D0D;
+    font-size: 2em;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.description {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.confetti {
+    max-width: 218px;
+}
