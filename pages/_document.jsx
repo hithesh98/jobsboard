@@ -29,7 +29,8 @@ class MyDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-            }}/>
+            }}
+          />
         </Head>
         <body>
           <Main />
