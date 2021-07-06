@@ -114,3 +114,9 @@
     width: 100%;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px){
+    .wireframeBrowser{
+        display: none;
+    }
+}
