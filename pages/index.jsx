@@ -16,8 +16,8 @@ export default function Home() {
           <Layout>
             <section className={styles.heroWrapper}>
               <article className={styles.copyWrapper}> 
-                <h1 className={styles.header}>The world&apos;s leading community for healthcare and lifesciences startup jobs</h1>
-                <h3>Find a job doing important work. Sign-up below to get notifications for jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
+                <h1 className={styles.header}>The community for healthcare and lifesciences startup jobs</h1>
+                <h3>Find work at an innovative startup. Sign-up below to get notifications for remote jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
               </article> 
               <article className={styles.wireframeBrowser}>
                 <div className={styles.browser}>
