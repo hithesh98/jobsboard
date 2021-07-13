@@ -14,6 +14,13 @@ export default function Layout({children}) {
                     </div>
                 </a>            
             </Link>
+            <Link href="jobs">
+                <a>
+                    <div>
+                        Remote Jobs
+                    </div>
+                </a>
+            </Link>
             <div className="content">
                 {children}
             </div>
