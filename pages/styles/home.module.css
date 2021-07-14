@@ -1,7 +1,8 @@
 .container{
     background: url("../../public/herobackground.svg") no-repeat;
-    background-size: contain;
-    background-position: top right;
+    background-size: cover;
+    background-position: bottom right ;
+    min-height: 100vh;
 }
 .heroWrapper {
     display: flex;

@@ -2,15 +2,17 @@
     display: flex;
     max-width: 950px;
     width: 100%;
-    margin: 0 auto;
     background: rgba(146, 142, 142, 0.26);
     border-radius: 10px;
+    margin: 1.5em auto;
+
 }
-.logoWrapper{
-    width: 15%;
+.role {
+    padding: 0.5em 0;
+    font-weight: 700;
 }
 .jobDetails{
-    width: 25%;
+    width: 40%;
     list-style: none;
     text-align: left;
 }

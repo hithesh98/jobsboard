@@ -1,21 +1,17 @@
 import React from 'react';
 import style from '../styles/jobList.module.css';
-import Image from 'next/image';
 
-export default function JobList() {
+export default function JobList({ job }) {
     return (
         <div className={style.jobListWrapper}>
-            <div className={style.logoWrapper}>
-                <p>Image</p>
-            </div>
             <ul className={style.jobDetails}>
-                <li> Company </li>
-                <li> Position </li>
-                <li> Job Type</li>
+                <li> {job.companyName} </li>
+                <li className={style.role}> {job.jobTitle} </li>
+                <li> {job.jobType}</li>
             </ul>
-            <p className={style.location}>United Kingdom</p>
+            <p className={style.location}>{job.jobLocation}</p>
             <p className={style.remote}>- Remote</p>
-            <button className={style.apply}> Apply </button>
+            <a className={style.apply} href={job.link} target="_blank"> Apply </a>
         </div>
     )
 }
