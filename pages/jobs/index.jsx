@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import useSWR from 'swr'
-import JobList from '../components/jobList';
+import JobList from '../components/JobList';
 
 export default function Jobs() {
     const { data: jobs, mutate } = useSWR('/api/getJobs'); 
