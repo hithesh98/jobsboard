@@ -1,0 +1,38 @@
+.jobListWrapper {
+    display: flex;
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(146, 142, 142, 0.26);
+    border-radius: 10px;
+}
+.logoWrapper{
+    width: 15%;
+}
+.jobDetails{
+    width: 25%;
+    list-style: none;
+    text-align: left;
+}
+.location{
+    width: 20%;
+    align-self: center;
+    text-align: right;
+}
+.remote{
+    width: 20%;
+    align-self: center;
+    text-align: left;
+    padding-left: 0.3em;
+}
+.apply{
+    width: 20%;
+    align-self: center;
+    max-width: 100px;
+    margin: 0 auto;
+    background-color: #E8A4A4;
+    outline: none;
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+}
