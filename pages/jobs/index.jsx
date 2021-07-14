@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import useSWR from 'swr'
 import JobList from '../components/jobList';
 
-export default function jobs() {
+export default function Jobs() {
     const { data: jobs, mutate } = useSWR('/api/getJobs'); 
     return (
         <Layout>

@@ -11,7 +11,7 @@ export default function JobList({ job }) {
             </ul>
             <p className={style.location}>{job.jobLocation}</p>
             <p className={style.remote}>- Remote</p>
-            <a className={style.apply} href={job.link} target="_blank"> Apply </a>
+            <a className={style.apply} href={job.link} target="_blank" rel="noreferrer"> Apply </a>
         </div>
     )
 }
