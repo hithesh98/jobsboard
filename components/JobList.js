@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../styles/jobList.module.css';
+import style from '../pages/styles/jobList.module.css';
 
 export default function JobList({ job }) {
     return (

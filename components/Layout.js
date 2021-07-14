@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '../../public/Logo.png';
+import logo from '../public/Logo.png';
 import Link from 'next/link'
 
 export default function Layout({children}) {
