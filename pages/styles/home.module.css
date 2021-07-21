@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: bottom right ;
     min-height: 100vh;
+    padding-bottom: 2em;
 }
 .heroWrapper {
     display: flex;
@@ -87,7 +88,6 @@
     margin: 0 auto;
     border-radius: 15px;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
 }
 
 #mceEMAIL {
