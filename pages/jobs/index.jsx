@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import Layout from '../../components/Layout'
 import useSWR, { useSWRInfinite } from 'swr'
 import JobList from '../../components/JobList';
-import JobsPage from '../../components/JobsPage';
 
 
 
@@ -12,9 +11,8 @@ if (previousPageData && !previousPageData.data) return null
 
 // first page, we don't have `previousPageData`
 if (pageIndex === 0) return `/api/getJobs`
-
 // add the cursor to the API endpoint
-return `/api/getJobs?cursor=${previousPageData.after[0]}`
+return `/api/${previousPageData.after[0]["@ref"].id}`
 }
 
 export default function Jobs() {
@@ -29,6 +27,7 @@ export default function Jobs() {
                     return pages.data.map((job)=>(
                         <JobList key={job.id} job={job} />))
                 })}
+                
                 <button onClick={() => setSize(size + 1)}>Load More...</button>
             </div>
         </Layout>

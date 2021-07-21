@@ -22,10 +22,10 @@ export const getJobs = async() => {
 }
 
 
-export const getMoreJobs = async(after) => {
+export const getMoreJobs = async(id) => {
     const data = await faunaClient.query(
         q.Map(
-            q.Paginate(q.Documents(q.Collection('jobsdb')), {size:20, after: after}),
+            q.Paginate(q.Documents(q.Collection('jobsdb')), {size:20, after:[ q.Ref(q.Collection('jobsdb'), id) ],}),
             q.Lambda('ref', {
                 companyName: q.Select(['data','companyName'], q.Get(q.Var('ref'))),
                 jobTitle: q.Select(['data','jobTitle'], q.Get(q.Var('ref'))),
