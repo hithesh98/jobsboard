@@ -1,4 +1,4 @@
-import { getJobs } from "../../util/Fauna";
+import { getJobs } from "../../../util/Fauna";
 
 
 export default async function handler(req, res) {

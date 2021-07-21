@@ -27,7 +27,7 @@ h3 {
 }
 .jobs{
     position: absolute;
-    right: 8em;
+    right: 8vw;
     top: 2em;
     color: #0D0D0D;
     font-size: 18px;
@@ -36,4 +36,17 @@ h3 {
 
 .content{
     margin: 0 1em;
+}
+
+@media screen and (max-width:500px) {
+    h1 {
+        font-size: 20px;
+    }
+    .logoWrapper {
+        max-width: 100px;
+        font-size: 13px;
+    }
+    .jobs {
+        font-size: 15px;
+    }
 }

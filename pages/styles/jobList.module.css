@@ -5,6 +5,7 @@
     background: rgba(146, 142, 142, 0.26);
     border-radius: 10px;
     margin: 1.5em auto;
+    justify-content: space-between;
 
 }
 .role {
@@ -26,15 +27,29 @@
     align-self: center;
     text-align: left;
     padding-left: 0.3em;
+    box-sizing: border-box;
 }
 .apply{
     width: 20%;
     align-self: center;
     max-width: 100px;
-    margin: 0 auto;
+    margin: 0 1em;
     background-color: #E8A4A4;
     outline: none;
     border: none;
     padding: 0.5em;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 700px) {
+    .jobListWrapper{
+        font-size: 12px;
+    }
+    .remote {
+        display: none;
+    }
+    .location{
+        margin: 0 1em;
+    }
 }

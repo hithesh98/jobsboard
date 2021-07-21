@@ -1,0 +1,13 @@
+.loadMore {
+    margin: 2em 1em 3.5em;
+    box-sizing: border-box;
+    padding: 0.8em 2em;
+    border-radius: 10px;
+    border-color: #E8A4A4;
+    border-style: solid;
+    max-width: 200px;
+    background-color: #f5f1e9;
+    font-weight: 700;
+    color: #E8A4A4;
+    cursor: pointer;
+}
