@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from './styles/home.module.css'
 import Layout from '../components/Layout'
+import JobPage from '../components/JobPage'
 
 export default function Home() {
   return (
@@ -185,6 +186,9 @@ export default function Home() {
                 </form>
               </div>
             </section>
+            <div className={styles.jobPage}>
+              <JobPage />
+            </div>
           </Layout>
         </main>
       </div>
