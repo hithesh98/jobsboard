@@ -17,6 +17,7 @@ export default function Home() {
         </Head>
         <main>
           <Layout>
+            <div className={styles.landing}>
               <section className={styles.heroWrapper}>
                 <article className={styles.copyWrapper}> 
                   <h1 className={styles.header}>The community for healthcare and lifesciences startup jobs</h1>
@@ -36,6 +37,7 @@ export default function Home() {
                 </form>
               </div>
             </section>
+            </div>
             <div className={styles.jobPage}>
               <JobPage />
             </div>

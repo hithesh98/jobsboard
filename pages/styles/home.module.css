@@ -3,8 +3,6 @@
     padding-bottom: 2em;
 }
 .background {
-    background: url("../../public/herobackground.svg") no-repeat;
-    background-size: contain;
     width: 50%;
 }
 .heroWrapper {
@@ -123,6 +121,7 @@
     .background{
         display: none;
     }
+
 }
 
 /* Job Page */
