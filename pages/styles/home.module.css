@@ -9,8 +9,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1em;
-
+    padding: 1em 1em 4em;
+    margin: -4em 0
 }
 
 .copyWrapper {
