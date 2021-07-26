@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import JobPage from '../components/JobPage'
 import Image from 'next/image'
 import background from '../public/herobackground.svg'
+import Subscribe from '../components/Subscribe'
 
 export default function Home() {
   return (
@@ -27,17 +28,8 @@ export default function Home() {
                   <Image src ={background} />
                 </div>
               </section>
-            <section className="email-wrapper">
-              <div id="mc_embed_signup">
-                <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-                    <div id={styles.mc_embed_signup_scroll}>
-                      <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
-                      <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
-                    </div>
-                </form>
-              </div>
-            </section>
             </div>
+            <Subscribe />
             <div className={styles.jobPage}>
               <JobPage />
             </div>

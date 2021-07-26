@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@typeform/embed-react": "^1.0.7",
     "faunadb": "^4.3.0",
     "next": "11.0.0",
     "react": "17.0.2",
