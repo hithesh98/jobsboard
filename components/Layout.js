@@ -15,13 +15,6 @@ export default function Layout({children}) {
                         </div>
                     </a>            
                 </Link>
-                <Link href="jobs">
-                    <a>
-                        <div className="jobs">
-                            Remote Jobs
-                        </div>
-                    </a>
-                </Link>
             </nav>
             <div className="content">
                 {children}

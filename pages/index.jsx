@@ -20,23 +20,23 @@ export default function Home() {
             <div className={styles.landing}>
               <section className={styles.heroWrapper}>
                 <article className={styles.copyWrapper}> 
-                  <h1 className={styles.header}>The community for healthcare and lifesciences startup jobs</h1>
-                  <h3>Find work at an innovative startup. Sign-up below to get notifications for remote jobs at the most innovative companies in the healthcare and life sciences industry.</h3>
+                  <h1 className={styles.header}>Discover remote jobs at healthcare and lifesciences companies.</h1>
+                  <h3>Sign-up below to get curated job alerts twice a week.</h3>
+                  <section className="email-wrapper">
+                  <div id="mc_embed_signup">
+                    <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                        <div id={styles.mc_embed_signup_scroll}>
+                          <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
+                          <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
+                        </div>
+                    </form>
+                  </div>
+                </section>
                 </article> 
                 <div className={styles.background}>
                   <Image src ={background} />
                 </div>
               </section>
-            <section className="email-wrapper">
-              <div id="mc_embed_signup">
-                <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-                    <div id={styles.mc_embed_signup_scroll}>
-                      <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
-                      <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
-                    </div>
-                </form>
-              </div>
-            </section>
             </div>
             <div className={styles.jobPage}>
               <JobPage />
