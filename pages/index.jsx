@@ -20,8 +20,8 @@ export default function Home() {
             <div className={styles.landing}>
               <section className={styles.heroWrapper}>
                 <article className={styles.copyWrapper}> 
-                  <h1 className={styles.header}>Discover remote jobs at healthcare and lifesciences companies.</h1>
-                  <h3>Sign-up below to get curated job alerts twice a week.</h3>
+                  <h1 className={styles.header}>Discover remote jobs at innovative healthcare and lifesciences companies.</h1>
+                  <h3>Sign-up below to get curated job alerts every week.</h3>
                   <section className="email-wrapper">
                   <div id="mc_embed_signup">
                     <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
