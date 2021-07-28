@@ -20,7 +20,6 @@ export default function JobPage() {
     return (
         <div>
             <h1>Remote Health Tech Jobs</h1>
-            <h6>Aggregated from LinkedIn and DigiHealth.Jobs</h6>
             {data.map((pages) => {
                 return pages.data.map((job) => (
                     <JobList key={job.id} job={job} />))

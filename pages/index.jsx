@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import JobPage from '../components/JobPage'
 import Image from 'next/image'
 import background from '../public/herobackground.svg'
-import Subscribe from '../components/Subscribe'
 
 export default function Home() {
   return (
@@ -39,7 +38,6 @@ export default function Home() {
                 </div>
               </section>
             </div>
-            <Subscribe />
             <div className={styles.jobPage}>
               <JobPage />
             </div>
