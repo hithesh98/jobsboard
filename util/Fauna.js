@@ -24,4 +24,57 @@ export const getMoreJobs = async(id) => {
     return data;
 }
 
-
+export const getEngineeringJobs = async() => {
+  const data = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index("jobs_by_category"), "engineering"), {
+          size: 5
+        }),
+        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+      )
+    )
+    
+    return data;
+  }
+  
+  
+  export const getMoreEngineeringJobs = async(id) => {
+      const data = await faunaClient.query(
+        q.Map(
+          q.Paginate(q.Match(q.Index("jobs_by_category"), "engineering"), {
+            size: 5,
+            after: [q.Ref(q.Collection("jobs"), id)]
+          }),
+          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        )
+      )
+      
+      return data;
+  }
+export const getCommercialJobs = async() => {
+  const data = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index("jobs_by_category"), "commercial"), {
+          size: 5
+        }),
+        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+      )
+    )
+    
+    return data;
+  }
+  
+  
+  export const getMoreCommercialJobs = async(id) => {
+      const data = await faunaClient.query(
+        q.Map(
+          q.Paginate(q.Match(q.Index("jobs_by_category"), "commercial"), {
+            size: 5,
+            after: [q.Ref(q.Collection("jobs"), id)]
+          }),
+          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        )
+      )
+      
+      return data;
+  }

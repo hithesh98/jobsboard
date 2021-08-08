@@ -39,7 +39,10 @@ export default function Home() {
               </section>
             </div>
             <div className={styles.jobPage}>
-              <JobPage />
+              <h2>Engineering</h2>
+              <JobPage category={'engineering'}/>
+              <h2>Commercial</h2>
+              <JobPage category={'commercial'}/>
             </div>
           </Layout>
         </main>
