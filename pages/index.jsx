@@ -20,7 +20,7 @@ export default function Home() {
             <div className={styles.landing}>
               <section className={styles.heroWrapper}>
                 <article className={styles.copyWrapper}> 
-                  <h1 className={styles.header}>Discover remote jobs at innovative healthcare and lifesciences companies.</h1>
+                  <h1 className={styles.header}>Discover jobs at innovative healthcare and lifesciences companies.</h1>
                   <h3>Sign-up below to get curated job alerts every week.</h3>
                   <section className="email-wrapper">
                   <div id="mc_embed_signup">

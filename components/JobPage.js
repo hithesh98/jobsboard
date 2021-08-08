@@ -11,7 +11,7 @@ const getKey = (pageIndex, previousPageData) => {
     // first page, we don't have `previousPageData`
     if (pageIndex === 0) return `/api/jobs`
     // add the cursor to the API endpoint
-    return `/api/jobs/${previousPageData.after[5]["@ref"].id}`
+    return `/api/jobs/${previousPageData.after[0]["@ref"].id}`
 }
 
 export default function JobPage() {

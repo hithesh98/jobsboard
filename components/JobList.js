@@ -7,10 +7,9 @@ export default function JobList({ job }) {
             <ul className={style.jobDetails}>
                 <li> {job.companyName} </li>
                 <li className={style.role}> {job.jobTitle} </li>
-                <li> {job.jobType}</li>
             </ul>
             <p className={style.location}>{job.jobLocation}</p>
-            <p className={style.remote}>- Remote</p>
+            {job.remote ? <p className={style.remote}>- Remote</p> : <p></p> }
             <a className={style.apply} href={job.link} target="_blank" rel="noreferrer"> Apply </a>
         </div>
     )
