@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from './styles/home.module.css'
 import Layout from '../components/Layout'
-import JobPage from '../components/JobPage'
+import HomeJobPage from '../components/HomeJobPage'
 import Image from 'next/image'
 import background from '../public/herobackground.svg'
 
@@ -39,10 +39,24 @@ export default function Home() {
               </section>
             </div>
             <div className={styles.jobPage}>
-              <h2>Engineering</h2>
-              <JobPage category={'engineering'}/>
-              <h2>Commercial</h2>
-              <JobPage category={'commercial'}/>
+              <h2 className={styles.categoryTitle}>Engineering</h2>
+              <HomeJobPage category={'engineering'}/>
+              <h2 className={styles.categoryTitle}>Commercial</h2>
+              <HomeJobPage category={'commercial'}/>
+              <h2 className={styles.categoryTitle}>Clinical</h2>
+              <HomeJobPage category={'clinical'}/>
+              <h2 className={styles.categoryTitle}>Product</h2>
+              <HomeJobPage category={'product'}/>
+              <h2 className={styles.categoryTitle}>Data</h2>
+              <HomeJobPage category={'data'}/>
+              <h2 className={styles.categoryTitle}>Marketing</h2>
+              <HomeJobPage category={'marketing'}/>
+              <h2 className={styles.categoryTitle}>Legal/HR/Finance</h2>
+              <HomeJobPage category={'legalhrfin'}/>
+              <h2 className={styles.categoryTitle}>Customer Success/Operation </h2>
+              <HomeJobPage category={'customersupportops'}/>
+              <h2 className={styles.categoryTitle}>Misc</h2>
+              <HomeJobPage category={'misc'}/>
             </div>
           </Layout>
         </main>
