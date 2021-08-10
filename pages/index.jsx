@@ -41,20 +41,28 @@ export default function Home() {
             <div className={styles.jobPage}>
               <h2 className={styles.categoryTitle}>Engineering</h2>
               <HomeJobPage category={'engineering'}/>
+              
               <h2 className={styles.categoryTitle}>Commercial</h2>
               <HomeJobPage category={'commercial'}/>
+
               <h2 className={styles.categoryTitle}>Clinical</h2>
               <HomeJobPage category={'clinical'}/>
+
               <h2 className={styles.categoryTitle}>Product</h2>
               <HomeJobPage category={'product'}/>
+
               <h2 className={styles.categoryTitle}>Data</h2>
               <HomeJobPage category={'data'}/>
+
               <h2 className={styles.categoryTitle}>Marketing</h2>
               <HomeJobPage category={'marketing'}/>
+
               <h2 className={styles.categoryTitle}>Legal/HR/Finance</h2>
               <HomeJobPage category={'legalhrfin'}/>
+
               <h2 className={styles.categoryTitle}>Customer Success/Operation </h2>
               <HomeJobPage category={'customersupportops'}/>
+
               <h2 className={styles.categoryTitle}>Misc</h2>
               <HomeJobPage category={'misc'}/>
             </div>

@@ -6,6 +6,7 @@
     border-radius: 10px;
     margin: 1.5em auto;
     justify-content: space-between;
+    min-width: 230px;
 
 }
 .role {

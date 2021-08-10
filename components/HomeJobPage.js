@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSWRInfinite } from 'swr'
 import JobList from './JobList';
-import styles from '../pages/styles/jobPage.module.css'
+import styles from '../pages/styles/homeJobPage.module.css'
 import Link from 'next/link';
 
 
@@ -17,9 +17,34 @@ export default function HomeJobPage({category}) {
     }
     const { data, size, setSize } = useSWRInfinite(getKey);
     const capCategory = category[0].toUpperCase() + category.slice(1);
-
+    
     if (!data) return "Loading..."
-    console.log(data)
+    if(category === 'customersupportops'){
+        return (
+            <div>
+                {data.map((pages) => {
+                    return pages.data.map((job) => (
+                        <JobList key={job.applyUrl} job={job} />))
+                })}
+                <Link href={`/jobs/${category}`}>
+                    <a className={styles.loadMore} >{`View all Customer Success/Ops jobs`}</a>
+                </Link>
+            </div>
+        )
+    }
+    if(category === 'legalhrfin'){
+        return (
+            <div>
+                {data.map((pages) => {
+                    return pages.data.map((job) => (
+                        <JobList key={job.applyUrl} job={job} />))
+                })}
+                <Link href={`/jobs/${category}`}>
+                    <a className={styles.loadMore} >{`View all Legal/HR/Finance jobs`}</a>
+                </Link>
+            </div>
+        )
+    }
     return (
         <div>
             {data.map((pages) => {
