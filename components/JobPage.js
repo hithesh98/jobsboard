@@ -2,11 +2,14 @@ import React from 'react'
 import { useSWRInfinite } from 'swr'
 import JobList from './JobList';
 import styles from '../pages/styles/jobPage.module.css'
+import { useState } from 'react'
+
 
 
 
 
 export default function JobPage({category}) {
+    const [remoteOnly, setRemote] = useState(false)
     const getKey = (pageIndex, previousPageData) => {
         // reached the end
         if (previousPageData && !previousPageData.data) return null
@@ -18,12 +21,16 @@ export default function JobPage({category}) {
     const { data, size, setSize } = useSWRInfinite(getKey);
 
     if (!data) return "Loading..."
-    console.log(data)
+
+
+
     return (
         <div>
-            {data.map((pages) => {
+            <button onClick={()=> setRemote(!remoteOnly)}>Remote jobs</button>
+            {data.map((pages) => {                
                 return pages.data.map((job) => (
-                    <JobList key={job.applyUrl} job={job} />))
+                    <JobList key={job.applyUrl} job={job} remotePressed={remoteOnly}/>
+                    ))
             })}
             <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>
         </div>

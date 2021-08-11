@@ -32,6 +32,10 @@
     padding-left: 0.3em;
     box-sizing: border-box;
 }
+.remote img {
+    width: 20px;
+    height: 20px;
+}
 .apply{
     width: 20%;
     align-self: center;
@@ -43,6 +47,10 @@
     padding: 0.5em;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.hideRemote {
+    display: none;
 }
 
 @media screen and (max-width: 700px) {
