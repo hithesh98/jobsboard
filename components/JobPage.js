@@ -3,6 +3,7 @@ import { useSWRInfinite } from 'swr'
 import JobList from './JobList';
 import styles from '../pages/styles/jobPage.module.css'
 import { useState } from 'react'
+import RemoteSwitch from './RemoteSwitch';
 
 
 
@@ -22,11 +23,9 @@ export default function JobPage({category}) {
 
     if (!data) return "Loading..."
 
-
-
     return (
         <div>
-            <button onClick={()=> setRemote(!remoteOnly)}>Remote jobs</button>
+            <RemoteSwitch remoteOnly={remoteOnly} onToggle={()=> setRemote(!remoteOnly)} /> 
             {data.map((pages) => {                
                 return pages.data.map((job) => (
                     <JobList key={job.applyUrl} job={job} remotePressed={remoteOnly}/>
