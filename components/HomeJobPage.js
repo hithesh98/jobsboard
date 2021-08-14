@@ -45,6 +45,19 @@ export default function HomeJobPage({category}) {
             </div>
         )
     }
+    if(category === 'misc'){
+        return (
+            <div>
+                {data.map((pages) => {
+                    return pages.data.map((job) => (
+                        <JobList key={job.applyUrl} job={job} />))
+                })}
+                <Link href={`/jobs/${category}`}>
+                    <a className={styles.loadMore} >{`View all Other jobs`}</a>
+                </Link>
+            </div>
+        )
+    }
     return (
         <div>
             {data.map((pages) => {

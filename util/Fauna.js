@@ -2,37 +2,21 @@ import faunadb from 'faunadb';
 const faunaClient = new faunadb.Client({secret: process.env.FAUNA_SECRET});
 const q = faunadb.query
 
-// ALL JOBS
-export const getJobs = async() => {
-    const data = await faunaClient.query(
-      q.Map(q.Paginate(q.Documents(q.Collection('jobs')), {size: 10}),
-      x => q.Select(['data'], q.Get(x))
-      )
-    )
-
-    return data;
-}
-
-
-export const getMoreJobs = async(id) => {
-    const data = await faunaClient.query(
-      q.Map(q.Paginate(q.Documents(q.Collection('jobs')), {size: 10, after: [q.Ref(q.Collection("jobs"), id)]}),
-      x => q.Select(['data'], q.Get(x))
-      )
-    )
-
-    return data;
-}
-
+// Variables used for queries
+const jobsByCategoryAscTitle = 'jobs_by_category_asc_title'
+// The number of jobs shown on home page.
+const homeSize = 5
+// The number of jobs shown per category page.
+const size = 2
 
 // JOBS FOR HOME PAGE
 export const getHomeEngineeringJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "engineering"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "engineering"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -44,10 +28,10 @@ export const getHomeEngineeringJobs = async() => {
 export const getHomeCommercialJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "commercial"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "commercial"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -57,10 +41,10 @@ export const getHomeCommercialJobs = async() => {
 export const getHomeProductJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "product"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "product"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -70,10 +54,10 @@ export const getHomeProductJobs = async() => {
 export const getHomeClinicalJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "clinical"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "clinical"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -83,10 +67,10 @@ export const getHomeClinicalJobs = async() => {
 export const getHomeMarketingJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "marketing"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "marketing"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -96,10 +80,10 @@ export const getHomeMarketingJobs = async() => {
 export const getHomeCustomerSupportOpsJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "customersupportops"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "customersupportops"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -109,10 +93,10 @@ export const getHomeCustomerSupportOpsJobs = async() => {
 export const getHomeDataJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "data"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "data"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -122,10 +106,10 @@ export const getHomeDataJobs = async() => {
 export const getHomeLegalHrFinJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "legalhrfin"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "legalhrfin"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -135,10 +119,10 @@ export const getHomeLegalHrFinJobs = async() => {
 export const getHomeMiscJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "misc"), {
-          size: 5
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "misc"), {
+          size: homeSize
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -149,24 +133,24 @@ export const getHomeMiscJobs = async() => {
   export const getEngineeringJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "engineering"), {
-            size: 10
+          q.Paginate(q.Match(q.Index("jobs_by_category_asc_title"), "engineering"), {
+            size: size,
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreEngineeringJobs = async(id) => {
+  export const getMoreEngineeringJobs = async(id, title) => {
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "engineering"), {
-          size: 10,
-          after: [q.Ref(q.Collection("jobs"), id)]
+        q.Paginate(q.Match(q.Index("jobs_by_category_asc_title"), "engineering"), {
+          size: size,
+          after: [title, q.Ref(q.Collection("jobs"), id)]
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -176,24 +160,24 @@ export const getHomeMiscJobs = async() => {
   export const getCommercialJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "commercial"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "commercial"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreCommercialJobs = async(id) => {
+  export const getMoreCommercialJobs = async(id, title) => {
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "commercial"), {
-            size: 10,
-            after: [q.Ref(q.Collection("jobs"), id)]
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "commercial"), {
+            size: size,
+            after: [title, q.Ref(q.Collection("jobs"), id)]
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -203,24 +187,24 @@ export const getHomeMiscJobs = async() => {
   export const getProductJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "product"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "product"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreProductJobs = async(id) => {
+  export const getMoreProductJobs = async(id, title) => {
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "product"), {
-          size: 10,
-          after: [q.Ref(q.Collection("jobs"), id)]
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "product"), {
+          size: size,
+          after: [title, q.Ref(q.Collection("jobs"), id)]
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -230,24 +214,24 @@ export const getHomeMiscJobs = async() => {
   export const getClinicalJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "clinical"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "clinical"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreClinicalJobs = async(id) => {
+  export const getMoreClinicalJobs = async(id, title) => {
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "clinical"), {
-            size: 10,
-            after: [q.Ref(q.Collection("jobs"), id)]
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "clinical"), {
+            size: size,
+            after: [title, q.Ref(q.Collection("jobs"), id)]
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -257,24 +241,24 @@ export const getHomeMiscJobs = async() => {
   export const getDataJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "data"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "data"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreDataJobs = async(id) => {
+  export const getMoreDataJobs = async(id, title) => {
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "data"), {
-          size: 10,
-          after: [q.Ref(q.Collection("jobs"), id)]
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "data"), {
+          size: size,
+          after: [title, q.Ref(q.Collection("jobs"), id)]
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -284,24 +268,24 @@ export const getHomeMiscJobs = async() => {
   export const getMarketingJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "marketing"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "marketing"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreMarketingJobs = async(id) => {
+  export const getMoreMarketingJobs = async(id, title) => {
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "marketing"), {
-            size: 10,
-            after: [q.Ref(q.Collection("jobs"), id)]
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "marketing"), {
+            size: size,
+            after: [title, q.Ref(q.Collection("jobs"), id)]
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -311,24 +295,24 @@ export const getHomeMiscJobs = async() => {
   export const getLegalHrFinJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "legalhrfin"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "legalhrfin"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreLegalHrFinJobs = async(id) => {
+  export const getMoreLegalHrFinJobs = async(id, title) => {
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category"), "legalhrfin"), {
-          size: 10,
-          after: [q.Ref(q.Collection("jobs"), id)]
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "legalhrfin"), {
+          size: size,
+          after: [title, q.Ref(q.Collection("jobs"), id)]
         }),
-        q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+        (x, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -338,24 +322,24 @@ export const getHomeMiscJobs = async() => {
   export const getCustomerSupportOpsJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "customersupportops"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "customersupportops"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreCustomerSupportOpsJobs = async(id) => {
+  export const getMoreCustomerSupportOpsJobs = async(id, title) => {
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "customersupportops"), {
-            size: 10,
-            after: [q.Ref(q.Collection("jobs"), id)]
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "customersupportops"), {
+            size: size,
+            after: [title, q.Ref(q.Collection("jobs"), id)]
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -365,27 +349,27 @@ export const getHomeMiscJobs = async() => {
   export const getMiscJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "misc"), {
-            size: 10
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "misc"), {
+            size: size
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreMiscJobs = async(id) => {
+  export const getMoreMiscJobs = async(id, title) => {
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category"), "misc"), {
-            size: 10,
-            after: [q.Ref(q.Collection("jobs"), id)]
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "misc"), {
+            size: size,
+            after: [title, q.Ref(q.Collection("jobs"), id)]
           }),
-          q.Lambda("X", q.Select(['data'] ,q.Get(q.Var("X"))))
+          (x, ref) => q.Select(["data"], q.Get(ref))
         )
       )
-      
+
       return data;
   }
   

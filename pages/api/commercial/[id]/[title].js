@@ -1,4 +1,4 @@
-import {getMoreDataJobs} from "../../../util/Fauna";
+import {getMoreCommercialJobs} from "../../../../util/Fauna";
 
 
 export default async function handler(req, res) {
@@ -8,7 +8,8 @@ export default async function handler(req, res) {
     try {
         if (req.query.id !== null){
             const {id} = req.query
-            const jobs = await getMoreDataJobs(id)
+            const {title} = req.query
+            const jobs = await getMoreCommercialJobs(id, title)
             return res.status(200).json(jobs)
         }
     } catch (error) {

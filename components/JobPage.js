@@ -17,7 +17,7 @@ export default function JobPage({category}) {
         // first page, we don't have `previousPageData`
         if (pageIndex === 0) return `/api/${category}`
         // add the cursor to the API endpoint
-        return `/api/${category}/${previousPageData.after[0]["@ref"].id}`
+        return `/api/${category}/${previousPageData.after[1]["@ref"].id}/${previousPageData.after[0]}`
     }
     const { data, size, setSize } = useSWRInfinite(getKey);
 
