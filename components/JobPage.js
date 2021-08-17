@@ -20,9 +20,17 @@ export default function JobPage({category}) {
         return `/api/${category}/${previousPageData.after[1]["@ref"].id}/${previousPageData.after[0]}`
     }
     const { data, size, setSize } = useSWRInfinite(getKey);
-
     if (!data) return "Loading..."
 
+    // checks the length of data array to know if its empy
+    const isEmpty = data?.[0]?.data.length === 0;
+    let pageSize;
+    // gets the number of jobs per page
+    if(!isEmpty){
+        pageSize = data?.[0]?.data.length  
+    }
+    const reachedEnd = isEmpty || data?.[data.length-1]?.data.length < pageSize
+   
     return (
         <div>
             <RemoteSwitch remoteOnly={remoteOnly} onToggle={()=> setRemote(!remoteOnly)} /> 
@@ -31,7 +39,11 @@ export default function JobPage({category}) {
                     <JobList key={job.applyUrl} job={job} remotePressed={remoteOnly}/>
                     ))
             })}
-            <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>
+            {reachedEnd
+                ? <p>No More Jobs</p>
+                : <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>
+            }
+            
         </div>
     )
 }
