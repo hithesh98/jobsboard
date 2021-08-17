@@ -15,6 +15,9 @@ export default function Layout({children}) {
                         </div>
                     </a>            
                 </Link>
+                <a className="postAJob" href="https://zhpyopst2jr.typeform.com/to/Kbk7VlPw" target="_blank">
+                    Post a Job
+                </a>
             </nav>
             <div className="content">
                 {children}
