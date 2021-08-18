@@ -1,4 +1,4 @@
-import { getMiscJobs } from "../../../util/Fauna";
+import { getOtherJobs } from "../../../util/Fauna";
 
 
 export default async function handler(req, res) {
@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         return res.status(405)
     }
     try {
-        const jobs = await getMiscJobs();
+        const jobs = await getOtherJobs();
         return res.status(200).json(jobs)
 
     } catch (error) {

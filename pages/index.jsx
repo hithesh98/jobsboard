@@ -64,7 +64,7 @@ export default function Home() {
               <HomeJobPage category={'customersupportops'}/>
 
               <h2 className={styles.categoryTitle}>Other Jobs</h2>
-              <HomeJobPage category={'misc'}/>
+              <HomeJobPage category={'other'}/>
             </div>
           </Layout>
         </main>

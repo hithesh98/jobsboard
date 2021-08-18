@@ -1,4 +1,4 @@
-import { getHomeMiscJobs } from "../../../../util/Fauna";
+import { getHomeOtherJobs } from "../../../../util/Fauna";
 
 
 export default async function handler(req, res) {
@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         return res.status(405)
     }
     try {
-        const jobs = await getHomeMiscJobs();
+        const jobs = await getHomeOtherJobs();
         return res.status(200).json(jobs)
 
     } catch (error) {
