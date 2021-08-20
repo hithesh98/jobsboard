@@ -7,7 +7,7 @@ const jobsByCategoryAscTitle = 'jobs_by_category_asc_title'
 // The number of jobs shown on home page.
 const homeSize = 5
 // The number of jobs shown per category page.
-const size = 2
+const size = 25
 
 // JOBS FOR HOME PAGE
 export const getHomeEngineeringJobs = async() => {

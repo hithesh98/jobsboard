@@ -36,7 +36,7 @@ export default function JobPage({category}) {
                     ))
             })}
             {reachedEnd
-                ? <p>No more jobs here right now.</p>
+                ? <p className={styles.noMore}>No more jobs here right now.</p>
                 : <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>
             }
             
