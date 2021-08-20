@@ -5,10 +5,6 @@ import styles from '../pages/styles/jobPage.module.css'
 import { useState } from 'react'
 import RemoteSwitch from './RemoteSwitch';
 
-
-
-
-
 export default function JobPage({category}) {
     const [remoteOnly, setRemote] = useState(false)
     const getKey = (pageIndex, previousPageData) => {
@@ -21,9 +17,9 @@ export default function JobPage({category}) {
     }
     const { data, size, setSize } = useSWRInfinite(getKey);
     if (!data) return "Loading..."
-
-    // checks the length of data array to know if its empy
-    const isEmpty = data?.[0]?.data.length === 0;
+    console.log(data)
+    // checks the length of data array to know if its empty
+    const isEmpty = !("after" in data[data.length-1]);
     let pageSize;
     // gets the number of jobs per page
     if(!isEmpty){
@@ -40,7 +36,7 @@ export default function JobPage({category}) {
                     ))
             })}
             {reachedEnd
-                ? <p>No More Jobs</p>
+                ? <p>No more jobs here right now.</p>
                 : <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>
             }
             
