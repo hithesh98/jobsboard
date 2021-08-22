@@ -1,13 +1,16 @@
 .container{
-    background: url("../../public/herobackground.svg") no-repeat;
-    background-size: contain;
-    background-position: top right;
+    min-height: 100vh;
+    padding-bottom: 2em;
+}
+.background {
+    width: 30%;
 }
 .heroWrapper {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 1em;
+
 }
 
 .copyWrapper {
@@ -86,7 +89,6 @@
     margin: 0 auto;
     border-radius: 15px;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
 }
 
 #mceEMAIL {
@@ -106,7 +108,7 @@
     min-width: 100px
 }
 #mcEmbeddedSubscribe {
-    background-color: #c4c4c4;
+    background-color: #E8A4A4;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -115,8 +117,18 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px){
-    .wireframeBrowser{
+@media screen and (max-width: 1075px){
+    .background{
         display: none;
     }
+
+}
+
+/* Job Page */
+.jobPage {
+    margin-top: 1.5rem;
+}
+
+.categoryTitle{
+    text-align: center;
 }

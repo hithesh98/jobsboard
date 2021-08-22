@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from './components/Layout'
+import Layout from '../components/Layout'
 import Image from 'next/image'
 import confetti from '../public/confetti.gif'
 import style from './styles/confirmation.module.css'
