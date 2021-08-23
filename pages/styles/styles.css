@@ -40,6 +40,7 @@ h3 {
 
 .content{
     margin: 0 1em;
+    min-height: 100vh;
 }
 
 .postAJob {
@@ -53,6 +54,39 @@ h3 {
     width: 80px;
     font-size: 16px;
 }
+
+/* Footer */
+.navbarFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1800px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.logoWrapperFooter {
+    max-width: 100px;
+    padding: 30px;
+}
+.nameFooter{
+    padding: 2em;
+    text-align: left;
+}
+.postAJobFooter {
+    padding: 1rem;
+    background-color: black;
+    color: #f5f1e9;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 60px;
+    font-size: 12px;
+}
+.footer{
+    background-color: #dcd8d2;
+    padding: 0 0 2em 0;
+    margin: 2.5em 0 0 0;
+}
+
 
 @media screen and (max-width:500px) {
     h1 {

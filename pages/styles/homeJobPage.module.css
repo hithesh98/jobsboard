@@ -11,6 +11,9 @@
     color: #E8A4A4;
     cursor: pointer;
 }
+.homeCategoryWrapper{
+    padding-bottom: 1.5em;
+}
 @media screen and (max-width: 400px) {
     .loadMore {
         font-size: 12px;

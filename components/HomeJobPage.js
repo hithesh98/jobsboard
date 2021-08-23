@@ -21,7 +21,7 @@ export default function HomeJobPage({category}) {
     if (!data) return "Loading..."
     if(category === 'customersupportops'){
         return (
-            <div>
+            <div className={styles.homeCategoryWrapper}>
                 {data.map((pages) => {
                     return pages.data.map((job) => (
                         <JobList key={job.applyUrl} job={job} />))
@@ -34,7 +34,7 @@ export default function HomeJobPage({category}) {
     }
     if(category === 'legalhrfin'){
         return (
-            <div>
+            <div className={styles.homeCategoryWrapper}>
                 {data.map((pages) => {
                     return pages.data.map((job) => (
                         <JobList key={job.applyUrl} job={job} />))
@@ -46,7 +46,7 @@ export default function HomeJobPage({category}) {
         )
     }
     return (
-        <div>
+        <div className={styles.homeCategoryWrapper}>
             {data.map((pages) => {
                 return pages.data.map((job) => (
                     <JobList key={job.applyUrl} job={job} />))

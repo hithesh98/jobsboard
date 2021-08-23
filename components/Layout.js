@@ -24,6 +24,20 @@ export default function Layout({children}) {
             <div className="content">
                 {children}
             </div>
+            <footer className='footer'>
+                <nav className="navbarFooter">
+                    <div className='nameFooter'>
+                        <h3>JobsinHealthTech.com </h3>
+                        <p>Dublin, Ireland</p>
+                        <p>Contact us at alerts@jobsinhealthtech.com</p>
+                    </div>    
+                    <Link href="/post">              
+                        <a className="postAJobFooter">
+                            Post a Job
+                        </a>
+                    </Link>
+                </nav>
+            </footer>
         </div>
     )
 }
