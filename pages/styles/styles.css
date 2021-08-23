@@ -56,6 +56,14 @@ h3 {
 }
 
 /* Footer */
+.navbarFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1800px;
+    margin: auto;
+    flex-wrap: wrap;
+}
 .logoWrapperFooter {
     max-width: 100px;
     padding: 30px;
@@ -68,8 +76,6 @@ h3 {
     padding: 1rem;
     background-color: black;
     color: #f5f1e9;
-    margin-right: 100px;
-    margin-left: 5px;
     border-radius: 7px;
     cursor: pointer;
     width: 60px;

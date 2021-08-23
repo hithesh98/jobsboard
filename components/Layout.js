@@ -25,7 +25,7 @@ export default function Layout({children}) {
                 {children}
             </div>
             <footer className='footer'>
-                <nav className="navbar">
+                <nav className="navbarFooter">
                     <div className='nameFooter'>
                         <h3>JobsinHealthTech.com </h3>
                         <p>Dublin, Ireland</p>
