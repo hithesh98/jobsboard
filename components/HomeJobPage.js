@@ -26,9 +26,11 @@ export default function HomeJobPage({category}) {
                     return pages.data.map((job) => (
                         <JobList key={job.applyUrl} job={job} />))
                 })}
-                <Link href={`/jobs/${category}`}>
-                    <a className={styles.loadMore} >{`View all Customer Success/Ops jobs`}</a>
-                </Link>
+                <div className={styles.loadMoreWrapper}>
+                    <Link href={`/jobs/${category}`}>
+                        <a className={styles.loadMore} >{`View all Customer Success/Ops jobs`}</a>
+                    </Link>
+                </div>
             </div>
         )
     }
@@ -39,9 +41,11 @@ export default function HomeJobPage({category}) {
                     return pages.data.map((job) => (
                         <JobList key={job.applyUrl} job={job} />))
                 })}
-                <Link href={`/jobs/${category}`}>
-                    <a className={styles.loadMore} >{`View all Legal/HR/Finance jobs`}</a>
-                </Link>
+                <div className={styles.loadMoreWrapper}>
+                    <Link href={`/jobs/${category}`}>
+                        <a className={styles.loadMore} >{`View all Legal/HR/Finance jobs`}</a>
+                    </Link>
+                </div>
             </div>
         )
     }
@@ -51,9 +55,11 @@ export default function HomeJobPage({category}) {
                 return pages.data.map((job) => (
                     <JobList key={job.applyUrl} job={job} />))
             })}
-            <Link href={`/jobs/${category}`}>
-                <a className={styles.loadMore} >{`View all ${capCategory} jobs`}</a>
-            </Link>
+            <div className={styles.loadMoreWrapper}>
+                <Link href={`/jobs/${category}`}>
+                    <a className={styles.loadMore} >{`View all ${capCategory} jobs`}</a>
+                </Link>
+            </div>
         </div>
     )
 }
