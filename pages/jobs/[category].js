@@ -3,11 +3,21 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Layout from '../../components/Layout'
 import JobPage from '../../components/JobPage'
+import { useEffect } from 'react'
+import { castArray } from 'lodash'
 
-export default function Commercial() {
-    
+export default function Category() {
     const router = useRouter()
     const { category } = router.query
+    const categoryList = ["clinical", "commercial", "data", "engineering", "marketing", "other", "product"]
+
+    // checkes if url is valid for categories
+    useEffect(() => {
+        if(category && !categoryList.includes(category)){
+            router.push("/")
+        }
+    }, [category])
+
     let capCategory;
     if(category){
         capCategory = category[0].toUpperCase()  + category.slice(1) + " Jobs"
@@ -24,4 +34,5 @@ export default function Commercial() {
             </Layout>
         </>   
     )
+    
 }
