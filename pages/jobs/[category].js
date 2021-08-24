@@ -14,7 +14,7 @@ export default function Category() {
     // checkes if url is valid for categories
     useEffect(() => {
         if(category && !categoryList.includes(category)){
-            router.push("/")
+            router.push("/404")
         }
     }, [category])
 
