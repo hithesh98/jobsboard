@@ -13,23 +13,23 @@ export default function Home() {
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"/>
 
-          <title>JobinHealthTech | Discover jobs at innovative healthcare and lifesciences companies.</title>
-          <meta name="description" content="JobsinHealthTech is a platform for people interested in the intersection of technology and health. Find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up our newsletter."/>
+          <title>JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies.</title>
+          <meta name="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
 
-          <meta itemProp="name" content="JobinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
-          <meta itemProp="description" content="JobsinHealthTech is a platform for people interested in the intersection of technology and health. Find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up our newsletter."/>
-          <meta itemProp="image" content="/Logo.png"/>
+          <meta itemProp="name" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
+          <meta itemProp="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
+          <meta itemProp="image" content="https://remoteok.io/assets/logo.png"/>
 
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
           <meta property="og:type" content="website"/>
-          <meta property="og:title" content="JobinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
-          <meta property="og:description" content="JobsinHealthTech is a platform for people interested in the intersection of technology and health. Find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up our newsletter."/>
-          <meta property="og:image" content="/Logo.png"/>
+          <meta property="og:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
+          <meta property="og:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
+          <meta property="og:image" content="https://remoteok.io/assets/logo.png"/>
 
           <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content="JobinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
-          <meta name="twitter:description" content="JobsinHealthTech is a platform for people interested in the intersection of technology and health. Find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up our newsletter."/>
-          <meta name="twitter:image" content="/Logo.png"/>
+          <meta name="twitter:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
+          <meta name="twitter:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
+          <meta name="twitter:image" content="https://remoteok.io/assets/logo.png"/>
         </Head>
         <main>
           <Layout>
