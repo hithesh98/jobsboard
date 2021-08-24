@@ -18,18 +18,18 @@ export default function Home() {
 
           <meta itemProp="name" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
           <meta itemProp="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
-          <meta itemProp="image" content="https://remoteok.io/assets/logo.png"/>
+          <meta itemProp="image" content="https://hithesh98.github.io/image-api/JHT/metaLogo.png"/>
 
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
           <meta property="og:type" content="website"/>
           <meta property="og:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
           <meta property="og:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
-          <meta property="og:image" content="https://remoteok.io/assets/logo.png"/>
+          <meta property="og:image" content="https://hithesh98.github.io/image-api/JHT/metaLogo.png"/>
 
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
           <meta name="twitter:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
-          <meta name="twitter:image" content="https://remoteok.io/assets/logo.png"/>
+          <meta name="twitter:image" content="https://hithesh98.github.io/image-api/JHT/metaLogo.png"/>
         </Head>
         <main>
           <Layout>
