@@ -1,0 +1,17 @@
+.wrapper{
+    display: flex;
+    margin: 2rem auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.copy {
+    color: black;
+}
+
+/* 404 */
+.title {
+    font-size: 106px;
+    margin: 0;
+}
