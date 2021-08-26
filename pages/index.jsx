@@ -33,7 +33,7 @@ export default function Home() {
         </Head>
         <main>
           <Layout>
-            <div className={styles.landing}>
+            <div>
               <section className={styles.heroWrapper}>
                 <article className={styles.copyWrapper}> 
                   <h1 className={styles.header}>Discover jobs at innovative healthcare and lifesciences companies.</h1>
