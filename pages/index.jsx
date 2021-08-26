@@ -31,7 +31,7 @@ export default function Home() {
                 </section>
                 </article> 
                 <div className={styles.background}>
-                  <Image src ={background} />
+                  <Image src ={background} alt='Doctor surrounded by technology items.'/>
                 </div>
               </section>
             </div>
