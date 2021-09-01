@@ -3,10 +3,10 @@ import Layout from '../../components/Layout'
 import { InstantSearch, SearchBox, Hits} from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite';
 import { useRouter } from 'next/router'
+import JobList from '../../components/JobList';
 
 
-
-const Hit = ({ hit }) => <p>{hit.jobTitle}</p>;
+const Hit = ({ hit }) => <JobList key={hit.applyUrl} job={hit} />;
 const searchClient = algoliasearch('VLJVAJ9ZX8', '0fddb2ff13078cbddcd2cec602fedc76')
 
 export default function Search() {
