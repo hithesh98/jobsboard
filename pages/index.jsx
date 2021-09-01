@@ -4,12 +4,7 @@ import Layout from '../components/Layout'
 import HomeJobPage from '../components/HomeJobPage'
 import Image from 'next/image'
 import background from '../public/herobackground.svg'
-import { InstantSearch, SearchBox, Hits} from 'react-instantsearch-dom'
-import algoliasearch from 'algoliasearch/lite';
 
-
-const Hit = ({ hit }) => <p>{hit.jobTitle}</p>;
-const searchClient = algoliasearch('VLJVAJ9ZX8', '0fddb2ff13078cbddcd2cec602fedc76')
 export default function Home() {
   return (
       <div className={styles.container}>
@@ -40,9 +35,6 @@ export default function Home() {
                 </div>
               </section>
             </div>
-            <InstantSearch indexName='jobs' searchClient={searchClient}>
-              <SearchBox />
-            </InstantSearch>
             <div className={styles.jobPage}>
               <h2 className={styles.categoryTitle}>Engineering Jobs</h2>
               <HomeJobPage category={'engineering'}/>
