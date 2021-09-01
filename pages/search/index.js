@@ -25,9 +25,37 @@ export default function Search() {
             <title>Search</title>
         </Head>
         <Layout>
-            <h1>Search</h1> 
             <InstantSearch indexName='jobs' searchClient={searchClient} >
-              <SearchBox searchAsYouType={false}/>
+              <header className='header'>
+                <h1>Search</h1> 
+                <SearchBox 
+                  searchAsYouType={false}
+                  translations={{
+                    placeholder: 'Location, Job Title, Company...',
+                  }}
+                  submit={
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 18 18"
+                    >
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.67"
+                        transform="translate(1 1)"
+                      >
+                        <circle cx="7.11" cy="7.11" r="7.11" />
+                        <path d="M16 16l-3.87-3.87" />
+                      </g>
+                    </svg>
+                  }
+                />
+              </header>
               <div className={styles.bodyWrapper}>
                 <div className={styles.leftPanel}>
                   <div className={styles.filterHeader}>
