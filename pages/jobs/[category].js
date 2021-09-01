@@ -4,7 +4,6 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import JobPage from '../../components/JobPage'
 import { useEffect } from 'react'
-import { castArray } from 'lodash'
 
 export default function Category() {
     const router = useRouter()
