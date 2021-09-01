@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import { InstantSearch, SearchBox} from 'react-instantsearch-dom'
+import { InstantSearch, SearchBox, ClearRefinements, RefinementList,Panel} from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite';
 import Head from 'next/head'
 import JobList from '../../components/JobList';
@@ -27,11 +27,17 @@ export default function Search() {
         <Layout>
             <h1>Search</h1> 
             <InstantSearch indexName='jobs' searchClient={searchClient} >
-              <SearchBox searchAsYouType={true}/>
+              <SearchBox searchAsYouType={false}/>
               <div className={styles.bodyWrapper}>
-                <div className={styles.refinement}>
-                  Category
-                  <p>Placeholder</p>
+                <div className={styles.leftPanel}>
+                  <ClearRefinements />
+                  <br></br>
+                  <Panel header='Category'>
+                    <RefinementList attribute='category'/>
+                  </Panel>
+                  <Panel header='Company'>
+                    <RefinementList attribute='companyName' seachable={true} />
+                  </Panel>
                 </div>
                 <div className={styles.hitsWrapper}>
                   <CustomHits />
