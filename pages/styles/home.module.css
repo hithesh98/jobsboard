@@ -62,11 +62,11 @@
 
 /* Subscribe button */
 #mcEmbeddedSubscribe {
-    background-color: #E8A4A4;
+    background-color: #b1a2dd;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    color: #5E5E5E;
+    color: #f5f1e9;
     width: 100%;
     cursor: pointer;
 }

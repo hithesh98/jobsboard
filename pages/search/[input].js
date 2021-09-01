@@ -14,7 +14,7 @@ export default function Search() {
     const {input} = router.query
     return (
         <Layout>
-            <h1> I am Search</h1> 
+            <h1>Search</h1> 
             <InstantSearch indexName='jobs' searchClient={searchClient} searchState={{query:`${input}`}}>
               <SearchBox searchAsYouType={false}/>
               <Hits hitComponent={Hit}/>

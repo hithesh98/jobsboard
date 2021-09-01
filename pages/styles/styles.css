@@ -44,14 +44,26 @@ h3 {
 }
 
 .postAJob {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background-color: black;
     color: #f5f1e9;
     margin-right: 100px;
     margin-left: 5px;
-    border-radius: 7px;
+    border-radius: 20px;
     cursor: pointer;
     width: 80px;
+    font-size: 16px;
+}
+
+.search {
+    padding: 0.5rem 1rem;
+    background-color: #55B8D2;
+    color: #f5f1e9;
+    margin-right: 10px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    max-width: 80px;
     font-size: 16px;
 }
 

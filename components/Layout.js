@@ -15,11 +15,19 @@ export default function Layout({children}) {
                         </div>
                     </a>            
                 </Link>
-                <Link href="/post">              
-                    <a className="postAJob">
-                        Post a Job
-                    </a>
-                </Link>
+                <div >                    
+                    <Link href="/search">              
+                        <a className="search">
+                            Search
+                        </a>
+                    </Link>
+
+                    <Link href="/post">              
+                        <a className="postAJob">
+                            Post a Job
+                        </a>
+                    </Link>
+                </div>
             </nav>
             <div className="content">
                 {children}
