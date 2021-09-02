@@ -333,72 +333,142 @@ padding-top: 2px;
     justify-content: space-between;
   }
   
-  .ais-ToggleRefinement-checkbox {
-    font: inherit;
-    margin-left: 1rem;
-    margin-right: 0;
-    position: relative;
-  }
-  
-  .ais-ToggleRefinement-checkbox:checked::before {
-    color: rgba(33, 36, 61, 0.32);
-  }
-  
-  .ais-ToggleRefinement-checkbox::before {
-    align-items: center;
-    color: rgba(33, 36, 61, 0.32);
-    content: 'No';
-    display: flex;
-    font-size: 0.8rem;
-    height: 16px;
-    position: absolute;
-    right: 38px;
-  }
-  
-  .ais-ToggleRefinement-checkbox:checked::before {
-    content: 'Yes';
-  }
-  
-  .ais-ToggleRefinement-count {
-    display: none;
-  }
+.ais-ToggleRefinement-checkbox {
+  font: inherit;
+  margin-left: 1rem;
+  margin-right: 0;
+  position: relative;
+}
 
-  .ais-ToggleRefinement-label {
-    cursor: pointer;
-    display: flex;
-  }
-  
-  .ais-ToggleRefinement-checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: rgba(65, 66, 71, 0.08);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    height: 16px;
-    margin-right: 16px;
-    min-width: 30px;
-    transition: background 150ms ease-out;
-  }
-  
-  .ais-ToggleRefinement-checkbox:checked {
-    background: aquamarine;
-  }
-  
-  .ais-ToggleRefinement-checkbox::after {
-    background-image: linear-gradient(to top, #f5f5fa, #fff);
-    border-radius: 100%;
-    box-shadow: 0 4px 11px 0 rgba(37, 44, 97, 0.15),
-      0 2px 3px 0 rgba(93, 100, 148, 0.2);
-    content: '';
-    height: 16px;
-    position: absolute;
-    transition: transform 150ms ease-out;
-    width: 16px;
-  }
-  
-  .ais-ToggleRefinement-checkbox:checked::after {
-    transform: translateX(100%);
-  }
-  
+.ais-ToggleRefinement-checkbox:checked::before {
+  color: rgba(33, 36, 61, 0.32);
+}
+
+.ais-ToggleRefinement-checkbox::before {
+  align-items: center;
+  color: rgba(33, 36, 61, 0.32);
+  content: 'No';
+  display: flex;
+  font-size: 0.8rem;
+  height: 16px;
+  position: absolute;
+  right: 38px;
+}
+
+.ais-ToggleRefinement-checkbox:checked::before {
+  content: 'Yes';
+}
+
+.ais-ToggleRefinement-count {
+  display: none;
+}
+
+.ais-ToggleRefinement-label {
+  cursor: pointer;
+  display: flex;
+}
+
+.ais-ToggleRefinement-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: rgba(65, 66, 71, 0.08);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 16px;
+  margin-right: 16px;
+  min-width: 30px;
+  transition: background 150ms ease-out;
+}
+
+.ais-ToggleRefinement-checkbox:checked {
+  background: aquamarine;
+}
+
+.ais-ToggleRefinement-checkbox::after {
+  background-image: linear-gradient(to top, #f5f5fa, #fff);
+  border-radius: 100%;
+  box-shadow: 0 4px 11px 0 rgba(37, 44, 97, 0.15),
+    0 2px 3px 0 rgba(93, 100, 148, 0.2);
+  content: '';
+  height: 16px;
+  position: absolute;
+  transition: transform 150ms ease-out;
+  width: 16px;
+}
+
+.ais-ToggleRefinement-checkbox:checked::after {
+  transform: translateX(100%);
+}
+/* Pagination */
+.container-footer {
+  margin: 4rem 0;
+}
+
+.ais-Pagination-list {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.ais-Pagination-item,
+.ais-Pagination-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.ais-Pagination-item {
+  height: 38px;
+  width: 38px;
+}
+
+.ais-Pagination-item {
+  background-color: rgba(65, 66, 71, 0.08);
+  border-radius: 4px;
+  color: #414247;
+}
+
+.ais-Pagination-item--selected {
+  background-color: #55B8D2;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0)
+  );
+  font-weight: bold;
+}
+
+.ais-Pagination-item--firstPage,
+.ais-Pagination-item--previousPage,
+.ais-Pagination-item--nextPage,
+.ais-Pagination-item--lastPage {
+  background: none;
+}
+
+.ais-Pagination-item--disabled {
+  opacity: 0.33;
+}
+
+.ais-Pagination-item--selected a {
+  color: #fff;
+}
+
+.ais-Pagination-item.ais-Pagination-item--page {
+  margin-right: 4px;
+}
+
+.ais-Pagination-item.ais-Pagination-item--previousPage {
+  margin-right: 1rem;
+}
+
+.ais-Pagination-item.ais-Pagination-item--nextPage {
+  margin-left: calc(1rem - 4px);
+}
+
+.ais-Pagination-link {
+  height: 100%;
+  width: 100%;
+}
+/* MOBILE VIEW */
