@@ -606,7 +606,7 @@ padding-top: 2px;
   }
   .filtering .leftPanel{
       position: absolute;
-      transform: translateY(4rem);
+      transform: translateY(6rem);
       box-sizing: border-box;
   }
   .container-filters-footer .button-primary {
@@ -616,5 +616,12 @@ padding-top: 2px;
   }
   .hitsWrapper{
     padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .search, .postAJob{
+    padding: 6px;
+    font-size: 12px;
   }
 }

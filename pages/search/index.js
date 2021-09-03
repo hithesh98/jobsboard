@@ -124,18 +124,18 @@ export default function Search() {
                         />
                       </div>
                     </div>
-                    <Panel header='Category'>
-                      <RefinementList attribute='category'/>
-                    </Panel>
-                    <Panel header='Company'>
-                      <RefinementList attribute='companyName' seachable={true} />
-                    </Panel>
                     <Panel header="Remote Only">
                       <ToggleRefinement
                         attribute="remote"
                         label="Display only remote jobs"
                         value={true}
                       />
+                    </Panel>
+                    <Panel header='Category'>
+                      <RefinementList attribute='category'/>
+                    </Panel>
+                    <Panel header='Company'>
+                      <RefinementList attribute='companyName' seachable={true} />
                     </Panel>
                     <footer className="container-filters-footer" data-layout="mobile">
                     <div className="container-filters-footer-button-wrapper">
