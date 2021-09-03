@@ -617,6 +617,12 @@ padding-top: 2px;
   .hitsWrapper{
     padding-left: 0;
   }
+  .filtering .hitsWrapper{
+    display: none;
+  }
+  .filtering .footer{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 350px) {
