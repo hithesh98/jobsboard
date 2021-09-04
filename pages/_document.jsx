@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 import { GA_TRACKING_ID } from '../lib/gtag'
+import Drift from 'react-driftjs'
 
 
 class MyDocument extends Document {
@@ -50,6 +51,7 @@ class MyDocument extends Document {
           `,
             }}
           />
+          <Drift appId='g6pbdn22f4zm' />
         </Head>
         <body>
           <Main />
