@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@typeform/embed-react": "^1.0.7",
+    "algoliasearch": "^4.10.5",
     "faunadb": "^4.3.0",
-    "next": "11.0.0",
+    "next": "^11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-driftjs": "^1.1.11",
+    "react-instantsearch": "^6.12.1",
     "swr": "^0.5.6"
   },
   "devDependencies": {
