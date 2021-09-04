@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 import { GA_TRACKING_ID } from '../lib/gtag'
-
+import Drift from 'react-driftjs'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -50,6 +50,7 @@ class MyDocument extends Document {
           `,
             }}
           />
+           <script type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.drift }}></script>
         </Head>
         <body>
           <Main />
