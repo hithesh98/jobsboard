@@ -4,7 +4,6 @@ import { InstantSearch, SearchBox, ClearRefinements, RefinementList,Panel,Toggle
 import algoliasearch from 'algoliasearch/lite';
 import Head from 'next/head'
 import JobList from '../../components/JobList';
-import styles from '../styles/search.module.css'
 import { connectHits } from 'react-instantsearch-dom';
 import { useRef } from 'react'
 
@@ -55,6 +54,20 @@ export default function Search() {
 
     closeFilters();
   }
+
+  function categoryRename(label){
+    if(label === 'legalhrfin'){
+      label ='Legal / HR / Finance'
+    } else if(label === 'customersupportops'){
+      label = 'Customer Success / Operations'
+    } else {
+      label = label[0].toUpperCase() + label.slice(1)
+    }
+
+    return label
+  }
+
+
     return (
         <>
         <Head>
@@ -132,7 +145,12 @@ export default function Search() {
                       />
                     </Panel>
                     <Panel header='Category'>
-                      <RefinementList attribute='category'/>
+                      <RefinementList attribute='category' transformItems={
+                        items => items.map(item=>({
+                            ...item,
+                            label: categoryRename(item.label)
+                        }))
+                      } />
                     </Panel>
                     <Panel header='Company'>
                       <RefinementList attribute='companyName' seachable={true} />
