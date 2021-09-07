@@ -153,7 +153,9 @@ export default function Search() {
                       } />
                     </Panel>
                     <Panel header='Company'>
-                      <RefinementList attribute='companyName' seachable={true} />
+                      <RefinementList attribute='companyName' searchable={true} translations={{
+                      placeholder: 'Search for company…',
+                  }}/>
                     </Panel>
                     <footer className="container-filters-footer" data-layout="mobile">
                     <div className="container-filters-footer-button-wrapper">

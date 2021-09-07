@@ -181,6 +181,10 @@ color: rgba(33, 36, 61, 0.24);
 color: #55B8D2;
 }
 
+.ais-RefinementList .ais-SearchBox-input {
+  padding-top:2px;
+}
+
 .ais-SearchBox-input {
 padding-top: 2px;
 }
@@ -268,6 +272,23 @@ padding-top: 2px;
   border: 0;
   cursor: pointer;
   user-select: none;
+}
+
+
+.ais-RefinementList .ais-SearchBox-input {
+  border-radius: 3px;
+  color: rgba(33, 36, 61, 0.8);
+  font-size: 0.8rem;
+  min-height: 40px;
+  padding: 0 44px;
+}
+
+.ais-RefinementList .ais-SearchBox-reset{
+  background-color: #ebe7df;
+}
+
+.ais-RefinementList .ais-SearchBox-form {
+  margin-bottom: 1rem;
 }
 /* PANEL */
 .ais-Panel {
@@ -630,6 +651,9 @@ padding-top: 2px;
   }
   .filtering .footer{
     display: none;
+  }
+  .ais-RefinementList .ais-SearchBox-reset{
+    background-color: #f4f4f4;
   }
 }
 
