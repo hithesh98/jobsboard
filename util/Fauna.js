@@ -1,9 +1,9 @@
-import faunadb from 'faunadb';
+import faunadb, { ToInteger } from 'faunadb';
 const faunaClient = new faunadb.Client({secret: process.env.FAUNA_SECRET});
 const q = faunadb.query
 
 // Variables used for queries
-const jobsByCategoryAscTitle = 'jobs_by_category_asc_title'
+const jobsByCategoryAscPriorityFeaturedFirst = 'jobs_by_category_asc_priority_featured_first'
 // The number of jobs shown on home page.
 const homeSize = 5
 // The number of jobs shown per category page.
@@ -13,10 +13,10 @@ const size = 25
 export const getHomeEngineeringJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "engineering"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "engineering"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -28,10 +28,10 @@ export const getHomeEngineeringJobs = async() => {
 export const getHomeCommercialJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "commercial"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "commercial"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -41,10 +41,10 @@ export const getHomeCommercialJobs = async() => {
 export const getHomeProductJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "product"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "product"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -54,10 +54,10 @@ export const getHomeProductJobs = async() => {
 export const getHomeClinicalJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "clinical"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "clinical"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -67,10 +67,10 @@ export const getHomeClinicalJobs = async() => {
 export const getHomeMarketingJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "marketing"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "marketing"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -80,10 +80,10 @@ export const getHomeMarketingJobs = async() => {
 export const getHomeCustomerSupportOpsJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "customersupportops"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "customersupportops"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -93,10 +93,10 @@ export const getHomeCustomerSupportOpsJobs = async() => {
 export const getHomeDataJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "data"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "data"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -106,10 +106,10 @@ export const getHomeDataJobs = async() => {
 export const getHomeLegalHrFinJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "legalhrfin"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "legalhrfin"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -119,10 +119,10 @@ export const getHomeLegalHrFinJobs = async() => {
 export const getHomeOtherJobs = async() => {
   const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "other"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "other"), {
           size: homeSize
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -133,24 +133,26 @@ export const getHomeOtherJobs = async() => {
   export const getEngineeringJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index("jobs_by_category_asc_title"), "engineering"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "engineering"), {
             size: size,
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
-      return data;
+      return data;  
     }
   
-  export const getMoreEngineeringJobs = async(id, title) => {
+  export const getMoreEngineeringJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index("jobs_by_category_asc_title"), "engineering"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "engineering"), {
           size: size,
-          after: [title, q.Ref(q.Collection("jobs"), id)]
+          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -160,24 +162,26 @@ export const getHomeOtherJobs = async() => {
   export const getCommercialJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "commercial"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "commercial"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreCommercialJobs = async(id, title) => {
+  export const getMoreCommercialJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "commercial"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "commercial"), {
             size: size,
-            after: [title, q.Ref(q.Collection("jobs"), id)]
+            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -187,24 +191,26 @@ export const getHomeOtherJobs = async() => {
   export const getProductJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "product"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "product"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreProductJobs = async(id, title) => {
+  export const getMoreProductJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "product"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "product"), {
           size: size,
-          after: [title, q.Ref(q.Collection("jobs"), id)]
+          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -214,24 +220,26 @@ export const getHomeOtherJobs = async() => {
   export const getClinicalJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "clinical"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "clinical"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreClinicalJobs = async(id, title) => {
+  export const getMoreClinicalJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "clinical"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "clinical"), {
             size: size,
-            after: [title, q.Ref(q.Collection("jobs"), id)]
+            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -241,24 +249,26 @@ export const getHomeOtherJobs = async() => {
   export const getDataJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "data"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "data"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreDataJobs = async(id, title) => {
+  export const getMoreDataJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "data"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "data"), {
           size: size,
-          after: [title, q.Ref(q.Collection("jobs"), id)]
+          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -268,24 +278,26 @@ export const getHomeOtherJobs = async() => {
   export const getMarketingJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "marketing"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "marketing"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreMarketingJobs = async(id, title) => {
+  export const getMoreMarketingJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "marketing"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "marketing"), {
             size: size,
-            after: [title, q.Ref(q.Collection("jobs"), id)]
+            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -295,24 +307,26 @@ export const getHomeOtherJobs = async() => {
   export const getLegalHrFinJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "legalhrfin"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "legalhrfin"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
   
-  export const getMoreLegalHrFinJobs = async(id, title) => {
+  export const getMoreLegalHrFinJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
-        q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "legalhrfin"), {
+        q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "legalhrfin"), {
           size: size,
-          after: [title, q.Ref(q.Collection("jobs"), id)]
+          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (x, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
       )
     )
     
@@ -322,24 +336,26 @@ export const getHomeOtherJobs = async() => {
   export const getCustomerSupportOpsJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "customersupportops"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "customersupportops"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreCustomerSupportOpsJobs = async(id, title) => {
+  export const getMoreCustomerSupportOpsJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "customersupportops"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "customersupportops"), {
             size: size,
-            after: [title, q.Ref(q.Collection("jobs"), id)]
+            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
@@ -349,24 +365,26 @@ export const getHomeOtherJobs = async() => {
   export const getOtherJobs = async() => {
     const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "other"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "other"), {
             size: size
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
       
       return data;
     }
 
-  export const getMoreOtherJobs = async(id, title) => {
+  export const getMoreOtherJobs = async(id, priorityString, featuredString) => {
+    const featured = Boolean(featuredString);
+    const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryAscTitle), "other"), {
+          q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "other"), {
             size: size,
-            after: [title, q.Ref(q.Collection("jobs"), id)]
+            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (x, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
         )
       )
 
