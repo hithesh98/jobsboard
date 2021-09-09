@@ -2,7 +2,6 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 import { GA_TRACKING_ID } from '../lib/gtag'
 
-
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -50,6 +49,7 @@ class MyDocument extends Document {
           `,
             }}
           />
+           <script type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.drift }}></script>
         </Head>
         <body>
           <Main />

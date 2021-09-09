@@ -11,9 +11,9 @@ export default function JobPage({category}) {
         // reached the end
         if (previousPageData && !previousPageData.data) return null
         // first page, we don't have `previousPageData`
-        if (pageIndex === 0) return `/api/${category}`
+        if (pageIndex === 0) return `/api/category/${category}`
         // add the cursor to the API endpoint
-        return `/api/${category}/${previousPageData.after[1]["@ref"].id}/${previousPageData.after[0]}`
+        return `/api/category/${category}/${previousPageData.after[0]}/${previousPageData.after[1]}/${previousPageData.after[2]["@ref"].id}`
     }
     const { data, size, setSize } = useSWRInfinite(getKey);
     if (!data) return "Loading..."

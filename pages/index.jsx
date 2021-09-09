@@ -54,10 +54,10 @@ export default function Home() {
               <h2 className={styles.categoryTitle}>Marketing Jobs</h2>
               <HomeJobPage category={'marketing'}/>
 
-              <h2 className={styles.categoryTitle}>Legal/HR/Finance Jobs</h2>
+              <h2 className={styles.categoryTitle}>Legal / HR / Finance Jobs</h2>
               <HomeJobPage category={'legalhrfin'}/>
 
-              <h2 className={styles.categoryTitle}>Customer Success/Operation Jobs</h2>
+              <h2 className={styles.categoryTitle}>Customer Success / Operations Jobs</h2>
               <HomeJobPage category={'customersupportops'}/>
 
               <h2 className={styles.categoryTitle}>Other Jobs</h2>
