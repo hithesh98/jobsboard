@@ -9,7 +9,16 @@
     min-width: 230px;
     box-sizing: border-box;
     padding: 0.5em 0;
-
+    
+}
+.featured {
+    background-color: #f4d28082;
+}
+.featuredTitle{
+    font-style: italic;
+}
+.notFeatured{
+    display: none;
 }
 .role {
     padding: 0.5em 0;
@@ -52,6 +61,7 @@
 .hideRemote {
     display: none;
 }
+
 
 @media screen and (max-width: 700px) {
     .jobListWrapper{
