@@ -31,10 +31,16 @@ ol{
     justify-content: space-between;
     max-width: 1800px;
     margin: auto;
+    position: fixed;
+    min-width:100% ;
+    background-color: #b1a2dd;
+    z-index: 8;
+    flex-wrap: wrap;
 }
 .logoWrapper {
-    max-width: 140px;
-    padding: 20px;
+  max-width: 110px;
+  padding: 15px;
+  padding-left: 45px;
 }
 .jobs{
     position: absolute;
@@ -48,6 +54,7 @@ ol{
 .content{
     margin: 0 1em;
     min-height: 100vh;
+    padding-top: 5.4rem;
 }
 
 .postAJob {
@@ -114,6 +121,9 @@ ol{
     margin: 2.5em 0 0 0;
 }
 
+.hamburger{
+  display: none;
+}
 
 @media screen and (max-width:500px) {
     h1 {
@@ -129,6 +139,9 @@ ol{
     .postAJob {
         padding: 0.5em;
         margin-right: 20px;
+    }
+    .hamburger{
+      display: block;
     }
 }
 
@@ -654,6 +667,32 @@ padding-top: 2px;
   }
   .ais-RefinementList .ais-SearchBox-reset{
     background-color: #f4f4f4;
+  }
+  .navMenu {
+    display: none;
+  }
+  .mobileMenu{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    right: 0;
+    padding: 1rem;
+    background-color: #b1a2dd;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+  .mobileMenu > .postAJob{
+    margin: auto;
+  }
+  .hamburger{
+    display: block;
+    padding: 1.5rem;
+    background-color: transparent;
+    border-style: none;
+  }
+  .logoName{
+    font-size: 10px;
   }
 }
 
