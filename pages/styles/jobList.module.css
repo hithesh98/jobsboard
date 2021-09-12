@@ -2,13 +2,14 @@
     display: flex;
     max-width: 950px;
     width: 100%;
-    background: rgba(146, 142, 142, 0.26);
+    background: #fffbfb;
     border-radius: 10px;
     margin: 1.5em auto;
     justify-content: space-between;
     min-width: 230px;
     box-sizing: border-box;
     padding: 0.5em 0;
+    box-shadow: 0 2px 6px -6px #777;
     
 }
 .featured {
