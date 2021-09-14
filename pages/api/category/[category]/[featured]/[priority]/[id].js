@@ -30,9 +30,9 @@ export default async function handler(req, res) {
     }
     try {
         if (req.query.id !== null){
-            const {id, featured, title, category } = req.query;
+            const {id, featured, priority, category } = req.query;
             const categoryFunction = getMoreJobsFunction(category);
-            const jobs = await categoryFunction(id, title, featured)
+            const jobs = await categoryFunction(id, priority, featured)
             return res.status(200).json(jobs)
         }
     } catch (error) {
