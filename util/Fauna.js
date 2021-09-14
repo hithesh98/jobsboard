@@ -9,6 +9,20 @@ const homeSize = 5
 // The number of jobs shown per category page.
 const size = 25
 
+// Boolean check 
+function booleanParse(boolString){
+  let featured;
+    if(boolString==='true'){
+      featured = true
+    } else if (boolString==='false'){
+      featured = false
+    } else {
+      featured = null
+    }
+    return featured
+}
+
+
 // JOBS FOR HOME PAGE
 export const getHomeEngineeringJobs = async() => {
   const data = await faunaClient.query(
@@ -144,7 +158,7 @@ export const getHomeOtherJobs = async() => {
     }
   
   export const getMoreEngineeringJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
@@ -173,7 +187,7 @@ export const getHomeOtherJobs = async() => {
     }
 
   export const getMoreCommercialJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
@@ -202,7 +216,7 @@ export const getHomeOtherJobs = async() => {
     }
   
   export const getMoreProductJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
@@ -231,7 +245,7 @@ export const getHomeOtherJobs = async() => {
     }
 
   export const getMoreClinicalJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
@@ -260,7 +274,7 @@ export const getHomeOtherJobs = async() => {
     }
   
   export const getMoreDataJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
@@ -289,7 +303,7 @@ export const getHomeOtherJobs = async() => {
     }
 
   export const getMoreMarketingJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
@@ -318,7 +332,7 @@ export const getHomeOtherJobs = async() => {
     }
   
   export const getMoreLegalHrFinJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
@@ -347,7 +361,7 @@ export const getHomeOtherJobs = async() => {
     }
 
   export const getMoreCustomerSupportOpsJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
@@ -376,7 +390,7 @@ export const getHomeOtherJobs = async() => {
     }
 
   export const getMoreOtherJobs = async(id, priorityString, featuredString) => {
-    const featured = Boolean(featuredString);
+    const featured = booleanParse(featuredString)
     const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
