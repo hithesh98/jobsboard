@@ -1,4 +1,4 @@
-import { getSinglePost, getPosts } from '../../lib/posts';
+import { getSinglePost, getPosts } from '../../../lib/posts';
 
 // PostPage page component
 export default function PostPage(props) {
