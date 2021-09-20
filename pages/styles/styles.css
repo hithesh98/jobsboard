@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #f5f1e9;
+    box-sizing: border-box;
     
 }
 
@@ -36,6 +37,7 @@ ol{
     background-color: #f5f1e9;
     z-index: 8;
     flex-wrap: wrap;
+    border-bottom: 2px solid #e8e6d6;
 }
 .logoWrapper {
   max-width: 110px;

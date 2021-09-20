@@ -5,4 +5,7 @@ module.exports = {
   env: {
     drift: fs.readFileSync('./lib/drift.js').toString()
   },
+  images: {
+    domains: ['static.ghost.org'],
+  },
 }
