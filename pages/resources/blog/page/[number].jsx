@@ -3,6 +3,9 @@ import Layout from '../../../../components/Layout'
 import { getPagePosts } from '../../../../lib/posts'
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
+import styles from '../../../styles/blogpage.module.css'
+import Image from 'next/image';
 
 
 export async function getStaticPaths(context){
@@ -58,18 +61,31 @@ export default function Index({posts, lastPage}) {
     }, [pageNum])
 
     return (
-        <Layout>
-             <ul>
-            {posts.map(post => (
-                <li key={post.id}>
-                    <Link href={`/resources/blog/${post.slug}`}>
-                    <a>{post.title}</a>
-                    </Link>
-                </li>
-            ))}
-            </ul>
-            {pageNum !== 1 ? <button onClick={onPrevious}> Previous </button> : null}
-            {pageNum !== lastPage ? <button onClick={onNext}> Next </button> : null}
-        </Layout>
+        <>
+          <Head>
+            <title>Blog: JobsinHealthTech</title>
+          </Head>
+          <Layout>
+              <div className={styles.hero}>
+                  <h1 className={styles.heroTitle}>JHT Blog</h1>
+              </div>
+              <div className={styles.blogsWrapper}>
+                  {posts.map(post => (
+                        <div key={post.id} className={styles.blog}>
+                          <Link href={`/resources/blog/${post.slug}`}>
+                          <a>
+                            <Image className={styles.imageWrapper} src={post.feature_image} alt={post.feature_image_alt} width={700} height={500} layout='responsive'/>
+                            <div className={styles.blogCopy}>
+                              <h3>{post.title}</h3>
+                            </div>
+                          </a>
+                          </Link>
+                      </div>
+                  ))}
+              </div>
+              {pageNum !== 1 ? <button onClick={onPrevious}> Previous </button> : null}
+              {pageNum !== lastPage ? <button onClick={onNext}> Next </button> : null}
+          </Layout>
+        </>
     )
 }
