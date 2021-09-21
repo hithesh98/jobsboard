@@ -76,7 +76,8 @@ export default function Index({posts, lastPage}) {
                           <a>
                             <Image className={styles.imageWrapper} src={post.feature_image} alt={post.feature_image_alt} width={700} height={500} layout='responsive'/>
                             <div className={styles.blogCopy}>
-                              <h3>{post.title}</h3>
+                              <p className={styles.tag}>{post.primary_tag.name}</p>
+                              <h3 className={styles.blogTitle}>{post.title}</h3>
                             </div>
                           </a>
                           </Link>
