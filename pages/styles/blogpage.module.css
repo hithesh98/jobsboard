@@ -18,6 +18,9 @@
     gap: 3rem;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
+.blog{
+    cursor: pointer;
+}
 
 .imageWrapper{
     border-top-left-radius: 2rem;
@@ -27,11 +30,17 @@
 .blogCopy{
     background-color: #fff;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    text-align: left;
 }
-
+.blogTitle{
+    margin-top: 0;
+}
+.tag{
+    margin-bottom: 0.5rem;
+}
 .button{
     padding: 9px 25px;
     margin: 2em;

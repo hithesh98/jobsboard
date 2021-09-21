@@ -6,17 +6,29 @@ import Image from 'next/image';
 // PostPage page component
 export default function PostPage({post}) {
   // Render post title and content in the page from props
-  console.log(post)
   return (
     <Layout>
       <header className={styles.header}>
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.excerpt}> {post.excerpt}</p>
+        <div className={styles.authorWrapper}>
+          <div className={styles.authorImage}>
+            <Image className={styles.authorImage} src={post.primary_author.profile_image} width={200} height={200} layout='responsive' alt='author picture'/>
+          </div>
+          <p>by <strong>{post.primary_author.name} </strong> </p>
+         </div>
       </header>
       <div className={styles.imageWrapper} >
         <Image src={post.feature_image} alt={post.feature_image_alt} width={700} height={500} layout='responsive'/>
       </div>
       <div className={styles.mainCopy} dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className={styles.authorFooter}>
+        <div className={styles.authorImageFooter}>
+              <Image className={styles.authorImage} src={post.primary_author.profile_image} width={200} height={200} layout='responsive' alt='author picture'/>
+        </div>
+        <h3 className={styles.authorName}>{post.primary_author.name}</h3>
+        <p className={styles.authorBio}>{post.primary_author.bio}</p>
+      </div>
     </Layout>
   )
 }
