@@ -35,7 +35,8 @@ export default function Layout({children}) {
                         <a className="search">
                             Blog
                         </a>
-                    </Link>                  
+                    </Link> 
+                                     
                     <Link href="/search">         
                         <a className="search">
                             <svg
