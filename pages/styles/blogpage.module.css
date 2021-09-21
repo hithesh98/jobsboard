@@ -12,7 +12,7 @@
 .blogsWrapper{
     display: grid;
     max-width: 1232px;
-    margin: auto;
+    margin: 1rem auto 6rem;
     padding: 0 2rem;
     box-sizing: border-box;
     gap: 3rem;
@@ -30,4 +30,13 @@
     padding: 1rem;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+}
+
+.button{
+    padding: 9px 25px;
+    margin: 2em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
 }

@@ -1,13 +1,23 @@
 import { getSinglePost, getPosts } from '../../../lib/posts';
+import Layout from '../../../components/Layout';
+import styles from '../../styles/blog.module.css'
+import Image from 'next/image';
 
 // PostPage page component
-export default function PostPage(props) {
+export default function PostPage({post}) {
   // Render post title and content in the page from props
+  console.log(post)
   return (
-    <div>
-      <h1>{props.post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
-    </div>
+    <Layout>
+      <header className={styles.header}>
+        <h1 className={styles.title}>{post.title}</h1>
+        <p className={styles.excerpt}> {post.excerpt}</p>
+      </header>
+      <div className={styles.imageWrapper} >
+        <Image src={post.feature_image} alt={post.feature_image_alt} width={700} height={500} layout='responsive'/>
+      </div>
+      <div className={styles.mainCopy} dangerouslySetInnerHTML={{ __html: post.html }} />
+    </Layout>
   )
 }
 

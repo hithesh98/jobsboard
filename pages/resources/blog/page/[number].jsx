@@ -83,8 +83,9 @@ export default function Index({posts, lastPage}) {
                       </div>
                   ))}
               </div>
-              {pageNum !== 1 ? <button onClick={onPrevious}> Previous </button> : null}
-              {pageNum !== lastPage ? <button onClick={onNext}> Next </button> : null}
+
+              {pageNum !== 1 ? <button onClick={onPrevious} className={styles.button}> Previous </button> : null}
+              {pageNum !== lastPage ? <button onClick={onNext} className={styles.button}> Next </button> : null}
           </Layout>
         </>
     )
