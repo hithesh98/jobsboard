@@ -11,7 +11,7 @@ export default function Home() {
         <Head>
           <title>JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies.</title>
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
-          <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/30087181452091fa46daaef74/e1ee969beab81b144c391de83.js");</script>
+          <script id="mcjs" type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.mailchimp}}></script>
         </Head>
         <main>
           <Layout>
