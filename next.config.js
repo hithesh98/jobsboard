@@ -6,6 +6,6 @@ module.exports = {
     drift: fs.readFileSync('./lib/drift.js').toString()
   },
   images: {
-    domains: ['static.ghost.org'],
+    domains: ['images.unsplash.com', 'res-3.cloudinary.com'],
   },
 }

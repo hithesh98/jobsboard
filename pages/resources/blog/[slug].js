@@ -2,9 +2,11 @@ import { getSinglePost, getPosts } from '../../../lib/posts';
 import Layout from '../../../components/Layout';
 import styles from '../../styles/blog.module.css'
 import Image from 'next/image';
+import Skeleton from '../../../components/Skeleton';
 
 // PostPage page component
 export default function PostPage({post}) {
+  if(!post) return <Skeleton />
   // Render post title and content in the page from props
   return (
     <Layout>
@@ -42,7 +44,7 @@ export async function getStaticPaths() {
   }))
 
   // { fallback: false } means posts not found should 404.
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 
@@ -56,8 +58,9 @@ export async function getStaticProps(context) {
       notFound: true,
     }
   }
-
+  
   return {
-    props: { post }
+    props: { post },
+    revalidate: 1
   }
 }
