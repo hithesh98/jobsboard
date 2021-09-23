@@ -42,7 +42,7 @@ export default function Home() {
               <h2 className={styles.categoryTitle}>Commercial Jobs</h2>
               <HomeJobPage category={'commercial'}/>
 
-              <h2 className={styles.categoryTitle}>Clinical Jobs</h2>
+              <h2 className={styles.categoryTitle}>Clinical / Research Jobs</h2>
               <HomeJobPage category={'clinical'}/>
 
               <h2 className={styles.categoryTitle}>Product Jobs</h2>
