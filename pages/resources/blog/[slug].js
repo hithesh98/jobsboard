@@ -3,12 +3,29 @@ import Layout from '../../../components/Layout';
 import styles from '../../styles/blog.module.css'
 import Image from 'next/image';
 import Skeleton from '../../../components/Skeleton';
-
+import Head from 'next/head';
 // PostPage page component
 export default function PostPage({post}) {
   if(!post) return <Skeleton />
   // Render post title and content in the page from props
   return (
+    <>
+    <Head>
+            <meta name="description" content={`${post.excerpt} - JobsinHealthTech`}/>
+            <meta itemProp="name" content={`${post.title} - JobsinHealthTech`}/>
+            <meta itemProp="description" content={`${post.excerpt} - JobsinHealthTech`}/>
+            <meta itemProp="image" content={post.feature_image}/>
+
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content={`${post.title} - JobsinHealthTech`}/>
+            <meta property="og:description"  content={`${post.excerpt} - JobsinHealthTech`}/>
+            <meta property="og:image" content={post.feature_image}/>
+
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:title" content={`${post.title} - JobsinHealthTech`}/>
+            <meta name="twitter:description" content={`${post.excerpt} - JobsinHealthTech`}/>
+            <meta name="twitter:image" content={post.feature_image}/>
+    </Head>
     <Layout>
       <header className={styles.header}>
         <h1 className={styles.title}>{post.title}</h1>
@@ -32,6 +49,7 @@ export default function PostPage({post}) {
         <p className={styles.authorBio}>{post.primary_author.bio}</p>
       </div>
     </Layout>
+    </>
   )
 }
 
