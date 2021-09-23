@@ -15,7 +15,7 @@
     max-width: 848px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 24px 40px;
+    padding: 40px 24px 40px;
     text-align: justify;
     overflow: hidden;
 }
@@ -61,5 +61,8 @@
 }
 .imageWrapper{
     max-width: 900px;
+    min-height: 400px;
+    height: auto;
     margin: auto;
+    position: relative;
 }
