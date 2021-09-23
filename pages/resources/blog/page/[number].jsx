@@ -76,7 +76,9 @@ export default function Index({posts, lastPage}) {
                         <div key={post.id} className={styles.blog}>
                           <Link href={`/resources/blog/${post.slug}`}>
                           <a>
-                            <Image className={styles.imageWrapper} src={post.feature_image} alt={post.feature_image_alt} width={700} height={500} layout='responsive'/>
+                            <div className={styles.imageWrapper}>
+                              <Image className={styles.coverImage} src={post.feature_image} alt={post.feature_image_alt} layout='fill' objectFit='cover' />
+                            </div>
                             <div className={styles.blogCopy}>
                               <p className={styles.tag}>{post.primary_tag.name}</p>
                               <h3 className={styles.blogTitle}>{post.title}</h3>
