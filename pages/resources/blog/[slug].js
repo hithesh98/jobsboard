@@ -21,7 +21,7 @@ export default function PostPage({post}) {
          </div>
       </header>
       <div className={styles.imageWrapper} >
-        <Image src={post.feature_image} alt={post.feature_image_alt} width={700} height={500} layout='responsive'/>
+        <Image src={post.feature_image} alt={post.feature_image_alt} layout='fill' objectFit='cover'/>
       </div>
       <div className={styles.mainCopy} dangerouslySetInnerHTML={{ __html: post.html }} />
       <div className={styles.authorFooter}>
