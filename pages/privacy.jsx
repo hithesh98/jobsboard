@@ -14,55 +14,18 @@ export default function Home() {
         </Head>
         <main>
           <Layout>
-            <div>
-              <section className={styles.heroWrapper}>
-                <article className={styles.copyWrapper}> 
-                  <h1 className={styles.header}>Discover jobs at innovative healthcare and lifesciences companies.</h1>
-                  <h3>Sign-up below to get curated job alerts every week.</h3>
-                  <section className="email-wrapper">
-                  <div id="mc_embed_signup">
-                    <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-                        <div id={styles.mc_embed_signup_scroll}>
-                          <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
-                          <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
-                        </div>
-                    </form>
-                  </div>
-                </section>
-                </article> 
-                <div className={styles.background}>
-                  <Image src ={background} alt='Doctor surrounded by technology items.'/>
-                </div>
-              </section>
-            </div>
-            <div className={styles.jobPage}>
-              <h2 className={styles.categoryTitle}>Engineering Jobs</h2>
-              <HomeJobPage category={'engineering'}/>
-              
-              <h2 className={styles.categoryTitle}>Commercial Jobs</h2>
-              <HomeJobPage category={'commercial'}/>
+          <h2 id="privacy-policy">Privacy Policy</h2>
+<p>Last updated: 22/09/2021</p>
+<p>Your privacy is important to us. It is the policy of Jobsinhealthtech.com,, which owns and operates JobsinHealthTech.com, to respect your privacy regarding any information we may collect from you on our website, <a href="https://jobsinhealthtech.com">https://jobsinhealthtech.com</a>.</p>
+<p>We only ask for personal information when we need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>
+<p>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
+<p>We don’t share any personally identifying information publicly or with third-parties without your consent, except when required to by law.</p>
+<p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.</p>
+<p>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.</p>
+<p>Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.</p>
+<h3 id="questions">Questions</h3>
+<p>Have any questions, comments, or concerns about this privacy policy, your data, or your rights with respect to your information? Please get in touch by emailing us at brian@jobsinhealthtech.com and we’ll be happy to answer them.**</p>
 
-              <h2 className={styles.categoryTitle}>Clinical / Research Jobs</h2>
-              <HomeJobPage category={'clinical'}/>
-
-              <h2 className={styles.categoryTitle}>Product Jobs</h2>
-              <HomeJobPage category={'product'}/>
-
-              <h2 className={styles.categoryTitle}>Data Jobs</h2>
-              <HomeJobPage category={'data'}/>
-
-              <h2 className={styles.categoryTitle}>Marketing Jobs</h2>
-              <HomeJobPage category={'marketing'}/>
-
-              <h2 className={styles.categoryTitle}>Legal / HR / Finance Jobs</h2>
-              <HomeJobPage category={'legalhrfin'}/>
-
-              <h2 className={styles.categoryTitle}>Customer Success / Operations Jobs</h2>
-              <HomeJobPage category={'customersupportops'}/>
-
-              <h2 className={styles.categoryTitle}>Other Jobs</h2>
-              <HomeJobPage category={'other'}/>
-            </div>
           </Layout>
         </main>
       </div>
