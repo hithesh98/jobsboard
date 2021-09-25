@@ -1,5 +1,6 @@
 .container{
     min-height: 100vh;
+    text-align: left;
 }
 .background {
     width: 30%;
@@ -14,7 +15,7 @@
 
 .copyWrapper {
     position: relative;
-    align-self: center;
+    align-self: left;
     max-width: 500px;
 
 }
