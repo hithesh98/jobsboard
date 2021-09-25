@@ -8,17 +8,17 @@ export default function Layout({children}) {
     const onMenuClick = () =>{
         setMobileMenu(!mobileMenuActive)
     }
-    
+
     return (
         <div className="layout">
-            <nav className="navbar">                
+            <nav className="navbar">
                 <Link href="/">
                     <a>
                         <div className="logoWrapper">
                             <Image src={logo} alt="Jobsinhealthtech logo"/>
                             <div className="logoName">JobsinHealthTech.com</div>
                         </div>
-                    </a>            
+                    </a>
                 </Link>
                 <button className={mobileMenuActive ? 'hamburger active' : 'hamburger'} onClick={onMenuClick}>
                     {mobileMenuActive ? <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,8 +30,8 @@ export default function Layout({children}) {
                     }
                 </button>
 
-                <div className={mobileMenuActive ? 'mobileMenu active' : 'mobileMenu'} >                    
-                    <Link href="/search">         
+                <div className={mobileMenuActive ? 'mobileMenu active' : 'mobileMenu'} >
+                    <Link href="/search">
                         <a className="search">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export default function Layout({children}) {
                         </a>
                     </Link>
 
-                    <Link href="/post">              
+                    <Link href="/post">
                         <a className="postAJob">
                             Post a Job
                         </a>
@@ -72,8 +72,10 @@ export default function Layout({children}) {
                         <h3>JobsinHealthTech.com </h3>
                         <p>Dublin, Ireland</p>
                         <p>Contact us at alerts@jobsinhealthtech.com</p>
-                    </div>    
-                    <Link href="/post">              
+                        <Link href="/terms"><a className="nameFooter">Terms of Service</a></Link>
+                        <Link href="/privacy"><a className="nameFooter">Privacy Policy</a></Link>
+                    </div>
+                    <Link href="/post">
                         <a className="postAJobFooter">
                             Post a Job
                         </a>
