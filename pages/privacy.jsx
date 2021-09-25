@@ -14,7 +14,7 @@ export default function Home() {
         </Head>
         <main>
           <Layout>
-          <div className={styles.categoryTitle}
+          <div className={styles.categoryTitle}>
           <h2>Privacy Policy</h2>
 <p>Last updated: 22/09/2021</p>
 <p>Your privacy is important to us. It is the policy of Jobsinhealthtech.com,, which owns and operates JobsinHealthTech.com, to respect your privacy regarding any information we may collect from you on our website, <a href="https://jobsinhealthtech.com">https://jobsinhealthtech.com</a>.</p>

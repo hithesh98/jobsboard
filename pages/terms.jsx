@@ -14,7 +14,7 @@ export default function Home() {
         </Head>
         <main>
           <Layout>
-          <div className={styles.categoryTitle}
+          <div className={styles.categoryTitle}>
           <h2>Terms of Service</h2>
 <p>Last Updated: 22/09/21</p>
 <h3>Preamble</h3>
