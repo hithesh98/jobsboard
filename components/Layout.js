@@ -72,8 +72,8 @@ export default function Layout({children}) {
                         <h3>JobsinHealthTech.com </h3>
                         <p>Dublin, Ireland</p>
                         <p>Contact us at alerts@jobsinhealthtech.com</p>
-                        <Link href="/terms"><a className="nameFooter">Terms of Service</a></Link>
-                        <Link href="/privacy"><a className="nameFooter">Privacy Policy</a></Link>
+                        <Link href="/terms"><a className="ToSFooter">Terms of Service</a></Link>
+                        <Link href="/privacy"><a className="ToSFooter">Privacy Policy</a></Link>
                     </div>
                     <Link href="/post">
                         <a className="postAJobFooter">
