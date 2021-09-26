@@ -9,7 +9,7 @@ export default function Home() {
   return (
       <div className={styles.container}>
         <Head>
-          <title>JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies.</title>
+          <title>JobsinHealthTech | Discover jobs at innovative healthcare and life sciences companies.</title>
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
         </Head>
         <main>
@@ -17,7 +17,7 @@ export default function Home() {
             <div>
               <section className={styles.heroWrapper}>
                 <article className={styles.copyWrapper}> 
-                  <h1 className={styles.header}>Discover jobs at innovative healthcare and lifesciences companies.</h1>
+                  <h1 className={styles.header}>Discover jobs at innovative healthcare and life sciences companies.</h1>
                   <h3>Sign-up below to get curated job alerts every week.</h3>
                   <section className="email-wrapper">
                   <div id="mc_embed_signup">
