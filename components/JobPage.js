@@ -5,17 +5,22 @@ import styles from '../pages/styles/jobPage.module.css'
 import { useState } from 'react'
 import RemoteSwitch from './RemoteSwitch';
 
-<h3>Sign-up below to get curated job alerts every week.</h3>
-<div className="email-wrapper">
-<div id="mc_embed_signup">
-  <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-      <div id={styles.mc_embed_signup_scroll}>
-        <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
-        <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
+<div>
+  <section className={styles.heroWrapper}>
+    <article className={styles.copyWrapper}>
+      <h1 className={styles.header}>Discover jobs at innovative healthcare and life sciences companies.</h1>
+      <h3>Sign-up below to get curated job alerts every week.</h3>
+      <section className="email-wrapper">
+      <div id="mc_embed_signup">
+        <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+            <div id={styles.mc_embed_signup_scroll}>
+              <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
+              <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
+            </div>
+        </form>
       </div>
-  </form>
-</div>
-</div>
+    </section>
+    </article>
 
 export default function JobPage({category}) {
     const [remoteOnly, setRemote] = useState(false)
