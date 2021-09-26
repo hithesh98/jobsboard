@@ -11,6 +11,7 @@ export default function Home() {
         <Head>
           <title>JobsinHealthTech | Discover jobs at innovative healthcare and life sciences companies.</title>
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
+          <script id="mcjs" type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.mailchimp}}></script>
         </Head>
         <main>
           <Layout>
@@ -29,7 +30,7 @@ export default function Home() {
                     </form>
                   </div>
                 </section>
-                </article> 
+                </article>
                 <div className={styles.background}>
                   <Image src ={background} alt='Doctor surrounded by technology items.'/>
                 </div>
@@ -38,7 +39,7 @@ export default function Home() {
             <div className={styles.jobPage}>
               <h2 className={styles.categoryTitle}>Engineering Jobs</h2>
               <HomeJobPage category={'engineering'}/>
-              
+
               <h2 className={styles.categoryTitle}>Commercial Jobs</h2>
               <HomeJobPage category={'commercial'}/>
 
