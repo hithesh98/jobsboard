@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import styles from './styles/privacyAndTerms.module.css'
 
-export default function Home() {
+export default function Terms() {
   return (
       <>
         <Layout>
