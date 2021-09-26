@@ -107,7 +107,7 @@ ol{
     text-align: left;
 }
 .ToSFooter{
-    padding: 2em;
+    padding: 2em 1em 2em 0;
     text-align: left;
     text-decoration: underline;
 }
