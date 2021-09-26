@@ -19,19 +19,19 @@ class MyDocument extends Document {
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
             
-            <meta name="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
-            <meta itemProp="name" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
-            <meta itemProp="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
+            <meta name="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and life sciences companies. Get weekly job alerts by signing up to our newsletter."/>
+            <meta itemProp="name" content="JobsinHealthTech | Discover jobs at innovative healthcare and life sciences companies."/>
+            <meta itemProp="description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and life sciences companies. Get weekly job alerts by signing up to our newsletter."/>
             <meta itemProp="image" content="https://jobsinhealthtech.com/metaLogo.png"/>
 
             <meta property="og:type" content="website"/>
-            <meta property="og:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
-            <meta property="og:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
+            <meta property="og:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and life sciences companies."/>
+            <meta property="og:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and life sciences companies. Get weekly job alerts by signing up to our newsletter."/>
             <meta property="og:image" content="https://jobsinhealthtech.com/metaLogo.png"/>
 
             <meta name="twitter:card" content="summary_large_image"/>
-            <meta name="twitter:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies."/>
-            <meta name="twitter:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and lifesciences companies. Get weekly job alerts by signing up to our newsletter."/>
+            <meta name="twitter:title" content="JobsinHealthTech | Discover jobs at innovative healthcare and life sciences companies."/>
+            <meta name="twitter:description" content="JobsinHealthTech helps you find jobs at the most innovative healthcare and life sciences companies. Get weekly job alerts by signing up to our newsletter."/>
             <meta name="twitter:image" content="https://jobsinhealthtech.com/metaLogo.png"/>
             <script
             async

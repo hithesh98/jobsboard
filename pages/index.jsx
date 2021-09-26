@@ -9,7 +9,7 @@ export default function Home() {
   return (
       <div className={styles.container}>
         <Head>
-          <title>JobsinHealthTech | Discover jobs at innovative healthcare and lifesciences companies.</title>
+          <title>JobsinHealthTech | Discover jobs at innovative healthcare and life sciences companies.</title>
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
           <script id="mcjs" type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.mailchimp}}></script>
         </Head>
@@ -17,8 +17,8 @@ export default function Home() {
           <Layout>
             <div>
               <section className={styles.heroWrapper}>
-                <article className={styles.copyWrapper}>
-                  <h1 className={styles.header}>Discover jobs at innovative healthcare and lifesciences companies.</h1>
+                <article className={styles.copyWrapper}> 
+                  <h1 className={styles.header}>Discover jobs at innovative healthcare and life sciences companies.</h1>
                   <h3>Sign-up below to get curated job alerts every week.</h3>
                   <section className="email-wrapper">
                   <div id="mc_embed_signup">
@@ -43,7 +43,7 @@ export default function Home() {
               <h2 className={styles.categoryTitle}>Commercial Jobs</h2>
               <HomeJobPage category={'commercial'}/>
 
-              <h2 className={styles.categoryTitle}>Clinical Jobs</h2>
+              <h2 className={styles.categoryTitle}>Clinical / Research Jobs</h2>
               <HomeJobPage category={'clinical'}/>
 
               <h2 className={styles.categoryTitle}>Product Jobs</h2>
