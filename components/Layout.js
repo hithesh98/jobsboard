@@ -30,8 +30,16 @@ export default function Layout({children}) {
                     }
                 </button>
 
-                <div className={mobileMenuActive ? 'mobileMenu active' : 'mobileMenu'} >
-                    <Link href="/search">
+
+                <div className={mobileMenuActive ? 'mobileMenu active' : 'mobileMenu'} >  
+                    <Link href="/resources/blog/page/1">
+                        <a className="search">
+                            Blog
+                        </a>
+                    </Link> 
+                                     
+                    <Link href="/search">         
+
                         <a className="search">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
