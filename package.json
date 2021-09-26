@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tryghost/content-api": "^1.5.13",
     "@typeform/embed-react": "^1.0.7",
     "algoliasearch": "^4.10.5",
     "faunadb": "^4.3.0",

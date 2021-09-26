@@ -1,0 +1,68 @@
+.header{
+    max-width: 848px;
+    margin: auto;
+    padding: 1em 0;
+}
+.title{
+    padding: 1em 0 0 0;
+}
+.excerpt{
+    max-width: 620px;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+.mainCopy{
+    max-width: 848px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px 24px 40px;
+    text-align: justify;
+    overflow: hidden;
+}
+.mainCopy img{
+    max-width: 100%;
+    height: auto;
+    padding: 1rem 0;
+}
+.authorWrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.authorImage{
+    width: 64px;
+    max-width: 64px;
+    height: auto;
+    padding-right: 2rem;
+    border-radius: 4rem;
+}
+.authorImageFooter{
+    width: 64px;
+    max-width: 64px;
+    height: auto;
+    border-radius: 4rem;
+}
+.authorFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.authorBio{
+    max-width: 250px;
+    margin-top: 0;
+}
+.authorName{
+    margin-bottom: 0.1rem;
+}
+.imageWrapper{
+    max-width: 900px;
+    min-height: 400px;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
