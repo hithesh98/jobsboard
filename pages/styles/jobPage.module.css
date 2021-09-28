@@ -22,8 +22,10 @@
     justify-content: center;
     background: #fffbfb;
     padding: 2em 1em 1em;
+    box-sizing: border-box;
+    max-width: 729px;
     width: 50%;
-    margin: 0 auto;
+    margin: 2em auto 3em;
     border-radius: 15px;
     flex-wrap: wrap;
     box-shadow:
