@@ -1,5 +1,5 @@
 import faunadb from 'faunadb';
-const faunaClient = new faunadb.Client({secret: process.env.FAUNA_SECRET});
+const faunaClient = new faunadb.Client({secret: process.env.FAUNA_SECRET_TEST});
 const q = faunadb.query
 
 // Variables used for queries
