@@ -24,8 +24,13 @@ export default function HomeJobPage({category}) {
             <div className={styles.homeCategoryWrapper}>
                 {data.map((pages) => {
                     return pages.data.map((job) => (
-                        <JobList key={job.applyUrl} job={job} />))
-                })}
+                        <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}`} >
+                            <a>
+                            <JobList job={job}  />
+                            </a>
+                        </Link>
+                    ))})}
+
                 <div className={styles.loadMoreWrapper}>
                     <Link href={`/jobs/${category}`}>
                         <a className={styles.loadMore} >{`View all Customer Success/Ops jobs`}</a>

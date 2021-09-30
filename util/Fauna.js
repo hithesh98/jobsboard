@@ -97,7 +97,7 @@ export const getHomeCustomerSupportOpsJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "customersupportops"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
