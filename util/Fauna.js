@@ -22,6 +22,12 @@ function booleanParse(boolString){
     return featured
 }
 
+export const getJobDetails = async(id) => {
+  const data = await faunaClient.query(
+    q.Select(["data"], q.Get(q.Ref(q.Collection('jobs'), id)))
+  )
+  return data
+}
 
 // JOBS FOR HOME PAGE
 export const getHomeEngineeringJobs = async() => {
