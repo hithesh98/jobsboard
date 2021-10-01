@@ -10,6 +10,7 @@
     box-sizing: border-box;
     padding: 0.5em 0;
     box-shadow: 0 2px 6px -6px #777;
+    color: black;
     
 }
 .featured {
