@@ -36,7 +36,7 @@ export const getHomeEngineeringJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "engineering"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -51,7 +51,7 @@ export const getHomeCommercialJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "commercial"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -64,7 +64,7 @@ export const getHomeProductJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "product"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -77,7 +77,7 @@ export const getHomeClinicalJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "clinical"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -90,7 +90,7 @@ export const getHomeMarketingJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "marketing"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -116,7 +116,7 @@ export const getHomeDataJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "data"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -129,7 +129,7 @@ export const getHomeLegalHrFinJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "legalhrfin"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -142,7 +142,7 @@ export const getHomeOtherJobs = async() => {
         q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "other"), {
           size: homeSize
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -156,7 +156,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "engineering"), {
             size: size,
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -172,7 +172,7 @@ export const getHomeOtherJobs = async() => {
           size: size,
           after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -185,7 +185,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "commercial"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -201,7 +201,7 @@ export const getHomeOtherJobs = async() => {
             size: size,
             after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -214,7 +214,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "product"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -230,7 +230,7 @@ export const getHomeOtherJobs = async() => {
           size: size,
           after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -243,7 +243,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "clinical"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -259,7 +259,7 @@ export const getHomeOtherJobs = async() => {
             size: size,
             after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -272,7 +272,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "data"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -288,7 +288,7 @@ export const getHomeOtherJobs = async() => {
           size: size,
           after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -301,7 +301,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "marketing"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -317,7 +317,7 @@ export const getHomeOtherJobs = async() => {
             size: size,
             after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -330,7 +330,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "legalhrfin"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -346,7 +346,7 @@ export const getHomeOtherJobs = async() => {
           size: size,
           after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
         }),
-        (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
     
@@ -359,7 +359,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "customersupportops"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -375,7 +375,7 @@ export const getHomeOtherJobs = async() => {
             size: size,
             after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -388,7 +388,7 @@ export const getHomeOtherJobs = async() => {
           q.Paginate(q.Match(q.Index(jobsByCategoryAscPriorityFeaturedFirst), "other"), {
             size: size
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
       
@@ -404,7 +404,7 @@ export const getHomeOtherJobs = async() => {
             size: size,
             after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
           }),
-          (featured, priority, ref) => q.Select(["data"], q.Get(ref))
+          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
 
