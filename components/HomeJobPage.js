@@ -23,13 +23,14 @@ export default function HomeJobPage({category}) {
         return (
             <div className={styles.homeCategoryWrapper}>
                 {data.map((pages) => {
-                    return pages.data.map((job) => (
-                        <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}`} >
-                            <a>
-                            <JobList job={job}  />
-                            </a>
-                        </Link>
-                    ))})}
+                    return pages.data.map((job) => {
+                        const title = (job.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
+                        return <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}`} >
+                                <a>
+                                <JobList job={job} />
+                                </a>
+                             </Link>
+                })})}
 
                 <div className={styles.loadMoreWrapper}>
                     <Link href={`/jobs/${category}`}>
@@ -43,9 +44,14 @@ export default function HomeJobPage({category}) {
         return (
             <div className={styles.homeCategoryWrapper}>
                 {data.map((pages) => {
-                    return pages.data.map((job) => (
-                        <JobList key={job.applyUrl} job={job} />))
-                })}
+                    return pages.data.map((job) => {
+                        const title = (job.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
+                        return  <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}`} >
+                                    <a>
+                                    <JobList job={job} />
+                                    </a>
+                                </Link>
+                    })})}
                 <div className={styles.loadMoreWrapper}>
                     <Link href={`/jobs/${category}`}>
                         <a className={styles.loadMore} >{`View all Legal/HR/Finance jobs`}</a>
@@ -57,9 +63,14 @@ export default function HomeJobPage({category}) {
     return (
         <div className={styles.homeCategoryWrapper}>
             {data.map((pages) => {
-                return pages.data.map((job) => (
-                    <JobList key={job.applyUrl} job={job} />))
-            })}
+                return pages.data.map((job) => {
+                    const title = (job.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
+                    return  <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}`} >
+                                <a>
+                                <JobList job={job} />
+                                </a>
+                            </Link>
+                })})}
             <div className={styles.loadMoreWrapper}>
                 <Link href={`/jobs/${category}`}>
                     <a className={styles.loadMore} >{`View all ${capCategory} jobs`}</a>
