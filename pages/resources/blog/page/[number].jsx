@@ -65,7 +65,15 @@ export default function Index({posts, lastPage}) {
     return (
         <>
           <Head>
-            <title>Blog: JobsinHealthTech</title>
+            <title>Health Tech Careers Blog</title>
+            <meta name="description" content='The Jobs in Health Tech blog aims to provide the best resources for developing your career in health technology.'/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content='Health Tech Careers Blog'/>
+            <meta property="og:description"  content='The Jobs in Health Tech blog aims to provide the best resources for developing your career in health technology.'/>
+
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:title" content='Health Tech Careers Blog'/>
+            <meta name="twitter:description" content='The Jobs in Health Tech blog aims to provide the best resources for developing your career in health technology.'/>
           </Head>
           <Layout>
               <div className={styles.hero}>
