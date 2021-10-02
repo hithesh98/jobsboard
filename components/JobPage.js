@@ -43,13 +43,14 @@ export default function JobPage({category}) {
             </section>
             <RemoteSwitch remoteOnly={remoteOnly} onToggle={()=> setRemote(!remoteOnly)} />
             {data.map((pages) => {
-                return pages.data.map((job) => (
-                    <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}`} >
-                            <a>
-                            <JobList job={job} remotePressed={remoteOnly} />
-                            </a>
-                    </Link>
-                ))})}
+                return pages.data.map((job) => {
+                    const title = (job.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
+                    return  <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}`} >
+                                <a>
+                                <JobList job={job} />
+                                </a>
+                            </Link>
+                })})}
             {reachedEnd
                 ? <p className={styles.noMore}>No more jobs here right now.</p>
                 : <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>
