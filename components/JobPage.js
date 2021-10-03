@@ -45,7 +45,8 @@ export default function JobPage({category}) {
             {data.map((pages) => {
                 return pages.data.map((job) => {
                     const title = (job.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
-                    return  <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}`} >
+                    const company = (job.companyName.toLowerCase()).replace(/[(), /]/g, "-")
+                    return  <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}-${company}`} >
                                 <a>
                                 <JobList job={job} />
                                 </a>
