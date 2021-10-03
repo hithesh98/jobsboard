@@ -1,8 +1,10 @@
-import React from 'react'
-import Layout from '../../components/Layout'
-import useSWR from 'swr'
-import { useRouter } from 'next/router'
-import DOMPurify from 'isomorphic-dompurify'
+import React from 'react';
+import Layout from '../../components/Layout';
+import useSWR from 'swr';
+import { useRouter } from 'next/router';
+import DOMPurify from 'isomorphic-dompurify';
+import styles from '../styles/job-id.module.css';
+
 
 
 
@@ -15,7 +17,7 @@ export default function Job() {
     if (!data) return <div>loading...</div>
     return (
         <Layout>
-            <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(data.description)}}></div>
+            <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(data.description)}}></div>
         </Layout>
     )
 }
