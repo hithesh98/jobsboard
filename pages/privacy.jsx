@@ -4,10 +4,13 @@ import styles from './styles/privacyAndTerms.module.css'
 
 export default function Privacy() {
   return (
-      <>
+      <>  
+        <Head>
+          <title>Privacy</title>
+        </Head>
           <Layout>
           <div className={styles.content}>
-            <h2>Privacy Policy</h2>
+            <h1>Privacy Policy</h1>
             <p>Last updated: 22/09/2021</p>
             <p>Your privacy is important to us. It is the policy of Jobsinhealthtech.com,, which owns and operates JobsinHealthTech.com, to respect your privacy regarding any information we may collect from you on our website, <a href="https://jobsinhealthtech.com">https://jobsinhealthtech.com</a>.</p>
             <p>We only ask for personal information when we need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>

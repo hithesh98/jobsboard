@@ -1,12 +1,16 @@
+import Head from 'next/head'
 import Layout from '../components/Layout'
 import styles from './styles/privacyAndTerms.module.css'
 
 export default function Terms() {
   return (
       <>
+        <Head>
+          <title>Terms</title>
+        </Head>
         <Layout>
           <div className={styles.content}>
-          <h2>Terms of Service</h2>
+          <h1>Terms of Service</h1>
           <p>Last Updated: 22/09/21</p>
           <h3>Preamble</h3>
           <p>Thanks for using JobsinHealthTech, we hope it has helped you find a job or hire someone in Health-tech or lifesciences. Because we don’t know every one of our users personally, we have to put in place some Terms of Service to help keep the ship afloat.</p>

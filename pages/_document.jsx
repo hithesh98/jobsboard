@@ -19,7 +19,6 @@ class MyDocument extends Document {
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
-            <meta name="description" content="Jobs in health tech is the leading careers community in health technology. Discover jobs in health tech, digital health and life sciences at jobsinhealthtech.com"/>
             <meta itemProp="name" content="Jobs in Health Tech | Discover Jobs at Healthcare and lifesciences companies "/>
             <meta itemProp="description" content="Jobs in health tech is the leading careers community in health technology. Discover jobs in health tech, digital health and life sciences at jobsinhealthtech.com"/>
             <meta itemProp="image" content="https://jobsinhealthtech.com/metaLogo.png"/>

@@ -10,8 +10,8 @@ export default function PostPage({post}) {
   // Render post title and content in the page from props
   return (
     <>
-    <Head>
-            <meta name="description" content={`${post.excerpt} - JobsinHealthTech`}/>
+    <Head>  
+            <title>{post.title}</title>
             <meta itemProp="name" content={`${post.title} - JobsinHealthTech`}/>
             <meta itemProp="description" content={`${post.excerpt} - JobsinHealthTech`}/>
             <meta itemProp="image" content={post.feature_image}/>
