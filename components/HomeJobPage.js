@@ -30,7 +30,7 @@ export default function HomeJobPage({category}) {
                                 <a>
                                 <JobList job={job} />
                                 </a>
-                             </Link>
+                            </Link>
                 })})}
 
                 <div className={styles.loadMoreWrapper}>
