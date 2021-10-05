@@ -4,7 +4,10 @@ import styles from './styles/privacyAndTerms.module.css'
 
 export default function Privacy() {
   return (
-      <>
+      <>  
+        <Head>
+          <title>Privacy</title>
+        </Head>
           <Layout>
           <div className={styles.content}>
             <h2>Privacy Policy</h2>

@@ -1,9 +1,13 @@
+import Head from 'next/head'
 import Layout from '../components/Layout'
 import styles from './styles/privacyAndTerms.module.css'
 
 export default function Terms() {
   return (
       <>
+        <Head>
+          <title>Terms</title>
+        </Head>
         <Layout>
           <div className={styles.content}>
           <h2>Terms of Service</h2>
