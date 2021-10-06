@@ -59,6 +59,26 @@ ol{
     padding-top: 5.4rem;
 }
 
+/* JOB PAGE DETAILS */
+.section.page-centered.posting-header{
+  padding: 1rem 0
+}
+.postings-btn-wrapper, .section.page-centered.last-section-apply{
+  width: fit-content;
+  height: fit-content;
+  margin: 2rem 0;
+}
+.postings-btn-wrapper  a, .section.page-centered.last-section-apply a {
+  background-color: #E8A4A4;
+  color: #000;
+  box-sizing: content-box;
+  padding: 1rem;
+  width: fit-content;
+  margin: 1rem 0;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
 .postAJob {
     padding: 0.5rem 1rem;
     background-color: black;

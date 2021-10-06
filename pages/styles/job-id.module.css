@@ -1,7 +1,8 @@
 .description{
     text-align: justify;
     max-width: 700px;
-    margin: auto;    
+    margin: auto;  
+    padding: 2rem 0;
 }
 
 .description li {
