@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import Layout from '../../../../components/Layout'
-import { getPagePosts } from '../../../../lib/posts'
+import Layout from '../../../components/Layout'
+import { getPagePosts } from '../../../lib/posts'
 import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import styles from '../../../styles/blogpage.module.css'
+import styles from '../../styles/blogpage.module.css'
 import Image from 'next/image';
 
 
@@ -59,7 +59,7 @@ export default function Index({posts, lastPage}) {
     }
 
     useEffect(() => {
-      router.push(`/resources/blog/page/${pageNum}`)
+      router.push(`/blog/page/${pageNum}`)
     }, [pageNum])
 
     return (
@@ -82,7 +82,7 @@ export default function Index({posts, lastPage}) {
               <div className={styles.blogsWrapper}>
                   {posts.map(post => (
                         <div key={post.id} className={styles.blog}>
-                          <Link href={`/resources/blog/${post.slug}`}>
+                          <Link href={`/blog/${post.slug}`}>
                           <a>
                             <div className={styles.imageWrapper}>
                               <Image className={styles.coverImage} src={post.feature_image} alt={post.feature_image_alt} layout='fill' objectFit='cover' />

@@ -1,8 +1,8 @@
-import { getSinglePost, getPosts } from '../../../lib/posts';
-import Layout from '../../../components/Layout';
-import styles from '../../styles/blog.module.css'
+import { getSinglePost, getPosts } from '../../lib/posts';
+import Layout from '../../components/Layout';
+import styles from '../styles/blog.module.css'
 import Image from 'next/image';
-import Skeleton from '../../../components/Skeleton';
+import Skeleton from '../../components/Skeleton';
 import Head from 'next/head';
 // PostPage page component
 export default function PostPage({post}) {
