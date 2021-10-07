@@ -5,7 +5,7 @@ import * as gtag from '../lib/gtag'
 import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
-  id: "GTM-TVK7PSL",
+  gtmId: "GTM-TVK7PSL",
 }
 
 const App = ({ Component, pageProps }) => {
