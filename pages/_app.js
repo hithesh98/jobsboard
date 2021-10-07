@@ -2,8 +2,17 @@ import './styles/styles.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+  id: "GTM-TVK7PSL",
+}
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
+  }, [])
+  
   const router = useRouter()
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -14,6 +23,7 @@ const App = ({ Component, pageProps }) => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
 
   return <Component {...pageProps} />
 }
