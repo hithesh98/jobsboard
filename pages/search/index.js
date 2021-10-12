@@ -15,7 +15,7 @@ const Hits = ({ hits }) => (<ol>
 const title = (hit.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
 const company = (hit.companyName.toLowerCase()).replace(/[(), /]/g, "-")
 return (<Link  key={hit.applyUrl} href={`/job-id/${hit.refID}-${title}-${company}`}>
-  <a>
+  <a className='joblistclick'>
     <JobList job={hit} />
   </a>
 </Link>)

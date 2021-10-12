@@ -49,6 +49,7 @@ class MyDocument extends Document {
             }}
           />
            <script type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.drift }}></script>
+           <base target="_blank"/>
         </Head>
         <body>
           <Main />
