@@ -12,7 +12,6 @@ export default function JobList({ job, remotePressed }) {
                     <li className={job.featured ? style.featuredTitle : style.notFeatured}> Featured </li>
                 </ul>
                 <p className={style.location}>{job.jobLocation}</p>
-                <a className={style.apply} href={job.applyUrl} target="_blank" rel="noreferrer"> Apply </a>
             </div>
         )
     }
@@ -25,7 +24,6 @@ export default function JobList({ job, remotePressed }) {
                     <li className={job.featured ? style.featuredTitle : style.notFeatured}> Featured </li>
                 </ul>
                 <p className={style.location}>{job.jobLocation}</p>
-                <a className={style.apply} href={job.applyUrl} target="_blank" rel="noreferrer"> Apply </a>
             </div>
         </div>
     )

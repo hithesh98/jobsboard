@@ -4,7 +4,7 @@ import JobList from './JobList';
 import styles from '../pages/styles/jobPage.module.css'
 import { useState } from 'react'
 import RemoteSwitch from './RemoteSwitch';
-
+import Link from 'next/link';
 
 export default function JobPage({category}) {
     const [remoteOnly, setRemote] = useState(false)
@@ -43,10 +43,15 @@ export default function JobPage({category}) {
             </section>
             <RemoteSwitch remoteOnly={remoteOnly} onToggle={()=> setRemote(!remoteOnly)} />
             {data.map((pages) => {
-                return pages.data.map((job) => (
-                    <JobList key={job.applyUrl} job={job} remotePressed={remoteOnly}/>
-                    ))
-            })}
+                return pages.data.map((job) => {
+                    const title = (job.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
+                    const company = (job.companyName.toLowerCase()).replace(/[(), /]/g, "-")
+                    return  <Link key={job.id['@ref'].id} href = {`/job-id/${job.id['@ref'].id}-${title}-${company}`} >
+                                <a>
+                                <JobList job={job} />
+                                </a>
+                            </Link>
+                })})}
             {reachedEnd
                 ? <p className={styles.noMore}>No more jobs here right now.</p>
                 : <button className={styles.loadMore} onClick={() => setSize(size + 1)}>Load More...</button>

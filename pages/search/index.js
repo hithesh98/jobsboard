@@ -6,15 +6,22 @@ import Head from 'next/head'
 import JobList from '../../components/JobList';
 import { connectHits } from 'react-instantsearch-dom';
 import { useRef } from 'react'
-
+import Link from 'next/link';
 
 
 // To avoid getting bullet point when hits are listed.
 const Hits = ({ hits }) => (<ol>
-{hits.map(hit => (
-  <JobList key={hit.applyUrl} job={hit} />
-))}
+{hits.map(hit => {
+const title = (hit.jobTitle.toLowerCase()).replace(/[(), /]/g, "-")
+const company = (hit.companyName.toLowerCase()).replace(/[(), /]/g, "-")
+return (<Link  key={hit.applyUrl} href={`/job-id/${hit.refID}-${title}-${company}`}>
+  <a className='joblistclick'>
+    <JobList job={hit} />
+  </a>
+</Link>)
+})}
 </ol>);
+
 const CustomHits = connectHits(Hits);
 
 const searchClient = algoliasearch('VLJVAJ9ZX8', '0fddb2ff13078cbddcd2cec602fedc76')

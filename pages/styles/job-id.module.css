@@ -1,0 +1,11 @@
+.description{
+    text-align: justify;
+    max-width: 700px;
+    margin: auto;  
+    padding: 2rem 0;
+}
+
+.description li {
+    list-style: disc;
+    padding: 0.3rem 0;
+}
