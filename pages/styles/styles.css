@@ -750,3 +750,6 @@ padding-top: 2px;
     font-size: 12px;
   }
 }
+.joblistclick{
+  z-index: -1;
+}
