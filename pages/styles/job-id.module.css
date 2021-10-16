@@ -1,11 +1,33 @@
+.jobPageWrapper{
+    display: flex;
+    justify-content:center;
+    max-width: 1000px;
+    flex-wrap: wrap-reverse;
+    margin: auto;
+}
 .description{
-    text-align: justify;
+    text-align: left;
     max-width: 700px;
-    margin: auto;  
     padding: 2rem 0;
 }
 
 .description li {
     list-style: disc;
     padding: 0.3rem 0;
+}
+
+.companyCard{
+    width: 20%;
+    margin: 4rem 0.5rem 0;
+    align-self: flex-end;
+    height: fit-content;
+    background-color: #DED7F1;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    overflow-wrap: break-word;
+}
+
+.logoWrapper{
+    padding: 1rem 0 0;
 }
