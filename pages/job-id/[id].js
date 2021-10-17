@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import DOMPurify from 'isomorphic-dompurify';
 import styles from '../styles/job-id.module.css';
+import CompanyCard from '../../components/CompanyCard';
 
 
 
@@ -20,7 +21,10 @@ export default function Job() {
     if (!data) return <div>loading...</div>
     return (
         <Layout>
-            <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(data.description)}}></div>
+            <div className={styles.jobPageWrapper}>
+                <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(data.description)}}></div>
+                <CompanyCard companyName={data.companyName} />
+            </div>
         </Layout>
     )
 }

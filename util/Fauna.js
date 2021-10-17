@@ -29,6 +29,13 @@ export const getJobDetails = async(id) => {
   return data
 }
 
+export const getCompanyDetails = async(name) => {
+  const data = await faunaClient.query(
+    q.Select(["data"], q.Get(q.Match(q.Index("company_by_name"), name)))
+  )
+  return data;
+}
+
 // JOBS FOR HOME PAGE
 export const getHomeEngineeringJobs = async() => {
   const data = await faunaClient.query(
