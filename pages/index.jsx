@@ -11,7 +11,6 @@ export default function Home() {
         <Head>
           <title>Jobs in Health Tech | Discover jobs at innovative healthcare and life sciences companies.</title>
           <meta property="og:url" content="https://jobsinhealthtech.com"/>
-          <script id="mcjs" type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.mailchimp}}></script>
         </Head>
         <main>
           <Layout>
