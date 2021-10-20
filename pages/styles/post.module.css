@@ -1,5 +1,19 @@
+.contentWrapper{
+    padding: 3rem 0;
+    max-width: 700px;
+    margin: auto;
+}
+
+.topCopy{
+    text-align: left;
+    margin: auto;
+}
+.topCopy li{
+    list-style: disc;
+
+}
+
 .typeform {
-    width: 80%;
     margin: auto;
     height: 600px;
     padding: 2em 0;
