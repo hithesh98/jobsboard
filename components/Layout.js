@@ -80,6 +80,7 @@ export default function Layout({children}) {
                         <h3>JobsinHealthTech.com </h3>
                         <p>Dublin, Ireland</p>
                         <p>Contact us at alerts@jobsinhealthtech.com</p>
+                        <Link href="/aboutus"><a className="ToSFooter">About Us</a></Link>
                         <Link href="/terms"><a className="ToSFooter">Terms of Service</a></Link>
                         <Link href="/privacy"><a className="ToSFooter">Privacy Policy</a></Link>
                     </div>
