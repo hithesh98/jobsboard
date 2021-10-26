@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Image from 'next/image'
-import confetti from '../public/confetti.gif'
+import confetti from '../public/conf.gif'
 import style from './styles/confirmation.module.css'
 
 
