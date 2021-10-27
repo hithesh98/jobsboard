@@ -12,41 +12,56 @@ export const getServerSideProps = ({ res }) => {
   <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
   
   
-  <url>
-    <loc>https://jobsinhealthtech.com/</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://jobsinhealthtech.com/resources/blog/page/1</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://jobsinhealthtech.com/search</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://jobsinhealthtech.com/post</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://jobsinhealthtech.com/terms</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://jobsinhealthtech.com/privacy</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://jobsinhealthtech.com/resources/blog/secure-a-role-in-one-of-the-fastest-growing-industries</loc>
-    <lastmod>2021-10-05T11:56:23+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
+<url>
+  <loc>https://jobsinhealthtech.com/</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/blog/page/1</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/search</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/post</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/aboutus</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/terms</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/privacy</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/blog/pursuing-a-career-in-health-informatics</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/blog/ehealth-digital-health-telehealth-healthtech-what-does-it-all-mean</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jobsinhealthtech.com/blog/secure-a-role-in-one-of-the-fastest-growing-industries</loc>
+  <lastmod>2021-10-27T11:53:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
   
   
   </urlset>`;
