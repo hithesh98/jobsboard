@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import DOMPurify from 'isomorphic-dompurify';
 import styles from '../styles/job-id.module.css';
 import CompanyCard from '../../components/CompanyCard';
+import Head from 'next/head';
 
 
 
@@ -20,11 +21,17 @@ export default function Job() {
     if (error) return <div>failed to load</div>
     if (!data) return <div>loading...</div>
     return (
-        <Layout>
-            <div className={styles.jobPageWrapper}>
-                <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(data.description)}}></div>
-                <CompanyCard companyName={data.companyName} />
-            </div>
-        </Layout>
+        <>
+            <Head>
+                <title>{data.companyName}: {data.jobTitle}</title>
+                <meta itemProp="description" content= {`${data.companyName} : ${data.jobTitle}`} />
+            </Head>
+            <Layout>
+                <div className={styles.jobPageWrapper}>
+                    <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize((data.description).replace(/h2>/g, "h1>"))}}></div>
+                    <CompanyCard companyName={data.companyName} />
+                </div>
+            </Layout>
+        </>
     )
 }
