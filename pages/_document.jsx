@@ -17,10 +17,10 @@ class MyDocument extends Document {
             <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"/>
 
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta name="description" content="Jobs in Health Tech is the leading careers community in health technology. Discover jobs in health tech, digital health and life sciences at jobsinhealthtech.com"/>
             <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
             <meta itemProp="name" content="Jobs in Health Tech | Discover Jobs at Healthcare and lifesciences companies "/>
-            <meta itemProp="description" content="Jobs in Health Tech is the leading careers community in health technology. Discover jobs in health tech, digital health and life sciences at jobsinhealthtech.com"/>
             <meta itemProp="image" content="https://jobsinhealthtech.com/metaLogo.png"/>
 
             <meta property="og:type" content="website"/>
