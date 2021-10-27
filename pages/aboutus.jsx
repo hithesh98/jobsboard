@@ -3,9 +3,14 @@ import Layout from '../components/Layout'
 import Image from 'next/image'
 import graphic from '../public/graphic.gif'
 import styles from '../pages/styles/aboutus.module.css'
+import Head from 'next/head';
 
 export default function aboutus() {
     return (
+        <>
+        <Head>
+            <title>About us</title>
+        </Head>
         <Layout>
             <div className={styles.contentWrapper}>
                 <Image src={graphic} width={500} height={500} alt="two characters"/>
@@ -19,5 +24,6 @@ export default function aboutus() {
                 </div>
             </div>
         </Layout>
+        </>
     )
 }
