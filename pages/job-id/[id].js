@@ -34,7 +34,7 @@ export default function Job() {
             }
         },
         "datePosted": data.timeAdded['@ts'],
-        "description": "",
+        "description": `${data.jobTitle}, ${data.companyName}, ${data.jobLocation} view more details at https://jobsinhealthtech.com/`,
         "title": data.jobTitle,
         "validThrough": "",
         "employmentType": "FULL_TIME",
@@ -43,14 +43,14 @@ export default function Job() {
             "name": data.companyName
         },
         "jobLocation": {
-            "@type": data.jobLocation,
+            "@type": "Place",
             "address": {
                 "@type": "",
                 "streetAddress": "",
                 "addressLocality": "",
                 "addressRegion": "",
                 "postalCode": "",
-                "addressCountry": ""
+                "addressCountry": data.jobLocation
             }
         },
          "baseSalary": {
@@ -58,7 +58,7 @@ export default function Job() {
         "currency": "USD",
         "value": {
           "@type": "QuantitativeValue",
-          "value": null,
+          "value": "",
           "unitText": "HOUR"
         }
       }
