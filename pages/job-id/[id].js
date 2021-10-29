@@ -45,7 +45,7 @@ export default function Job() {
         "jobLocation": {
             "@type": "Place",
             "address": {
-                "@type": "",
+                "@type": "PostalAddress",
                 "streetAddress": "",
                 "addressLocality": "",
                 "addressRegion": "",
