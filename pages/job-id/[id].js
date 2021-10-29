@@ -48,9 +48,9 @@ export default function Job() {
                 "@type": "",
                 "streetAddress": "",
                 "addressLocality": "",
-                "addressRegion": "",
+                "addressRegion": data.jobLocation,
                 "postalCode": "",
-                "addressCountry": data.jobLocation
+                "addressCountry": ""
             }
         },
          "baseSalary": {
