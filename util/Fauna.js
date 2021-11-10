@@ -3,7 +3,7 @@ const faunaClient = new faunadb.Client({secret: process.env.FAUNA_SECRET});
 const q = faunadb.query
 
 // Variables used for queries
-const jobsByCategoryAscPriorityFeaturedFirst = 'jobs_on_home_page'
+const jobsByCategoryAscPriorityFeaturedFirst = 'jobs_by_category_asc_priority_featured_first'
 // The number of jobs shown on home page.
 const homeSize = 5
 // The number of jobs shown per category page.
