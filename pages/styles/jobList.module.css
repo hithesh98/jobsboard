@@ -11,7 +11,12 @@
     padding: 0.5em 0;
     box-shadow: 0 2px 6px -6px #777;
     color: black;
+    align-items: center;
     
+}
+.age{
+    padding: 0 1.5rem 0 0;
+    color: #777;
 }
 .featured {
     background-color: #f7d68882;
@@ -32,10 +37,10 @@
     text-align: left;
 }
 .location{
-    width: 20%;
+    width: 15%;
     align-self: center;
     text-align: right;
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 .remote{
     width: 20%;

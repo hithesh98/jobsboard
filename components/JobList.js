@@ -23,8 +23,8 @@ export default function JobList({ job, remotePressed }) {
                     <li className={style.role}> {job.jobTitle} </li>
                     <li className={job.featured ? style.featuredTitle : style.notFeatured}> Featured </li>
                 </ul>
-                <p>{displayAge}</p>
                 <p className={style.location}>{job.jobLocation}</p>
+                <p className= {style.age}>{displayAge}</p>
             </div>
         )
     }
@@ -36,8 +36,8 @@ export default function JobList({ job, remotePressed }) {
                     <li className={style.role}> {job.jobTitle} </li>
                     <li className={job.featured ? style.featuredTitle : style.notFeatured}> Featured </li>
                 </ul>
-                <p>{displayAge}</p>
                 <p className={style.location}>{job.jobLocation}</p>
+                <p className= {style.age}>{displayAge}</p>
             </div>
         </div>
     )
