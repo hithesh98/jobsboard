@@ -7,7 +7,7 @@ const jobsByCategoryLatestFeaturedFirst = 'jobs_by_category_latest_featured_firs
 // The number of jobs shown on home page.
 const homeSize = 5
 // The number of jobs shown per category page.
-const size = 25
+const size = 2
 
 // Boolean check 
 function booleanParse(boolString){
@@ -158,7 +158,7 @@ export const getHomeOtherJobs = async() => {
   
   // JOBS BY CATEGORIES 
   export const getEngineeringJobs = async() => {
-    const data = await faunaClient.query(
+    let data = await faunaClient.query(
         q.Map(
           q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "engineering"), {
             size: size,
@@ -167,22 +167,24 @@ export const getHomeOtherJobs = async() => {
         )
       )
       
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
+
       return data;  
     }
   
   export const getMoreEngineeringJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
+    console.log(priorityString)
     const data = await faunaClient.query(
       q.Map(
         q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "engineering"), {
           size: size,
-          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
+          after: [featured, q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
         }),
         (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
-    
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
     return data;
   }
 

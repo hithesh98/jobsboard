@@ -3,17 +3,19 @@ import style from '../pages/styles/jobList.module.css';
 import Image from 'next/image'
 
 export default function JobList({ job, remotePressed }) {
-    const currentTime = new Date().getDate()
-
-    const jobTime = new Date(job.timeAdded['@ts'])
-    const age = currentTime - jobTime.getDate()
     let displayAge;
-    if (age < 1){
-        displayAge = 'Today'
-    } else if (age == 1 ) {
-        displayAge = '1 day ago'
-    } else {
-        displayAge = `${age} days ago`
+    if("timeAdded" in job){
+        const currentTime = new Date().getDate()
+    
+        const jobTime = new Date(job.timeAdded['@ts'])
+        const age = currentTime - jobTime.getDate()
+        if (age < 1){
+            displayAge = 'Today'
+        } else if (age == 1 ) {
+            displayAge = '1 day ago'
+        } else {
+            displayAge = `${age} days ago`
+        }
     }
     if(job.remote){
         return (            
