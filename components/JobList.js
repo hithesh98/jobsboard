@@ -5,10 +5,12 @@ import Image from 'next/image'
 export default function JobList({ job, remotePressed }) {
     let displayAge;
     if("timeAdded" in job){
-        const currentTime = new Date().getDate()
-    
+        const currentTime = new Date().getTime()
         const jobTime = new Date(job.timeAdded['@ts'])
-        const age = currentTime - jobTime.getDate()
+        console.log(jobTime)
+        const difference = currentTime - jobTime.getTime()
+        const age =  Math.floor(difference / (1000 * 3600 * 24));
+        console.log(age)
         if (age < 1){
             displayAge = 'Today'
         } else if (age == 1 ) {
