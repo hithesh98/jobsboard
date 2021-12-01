@@ -7,7 +7,7 @@ const jobsByCategoryLatestFeaturedFirst = 'jobs_by_category_latest_featured_firs
 // The number of jobs shown on home page.
 const homeSize = 5
 // The number of jobs shown per category page.
-const size = 2
+const size = 20
 
 // Boolean check 
 function booleanParse(boolString){
@@ -174,7 +174,6 @@ export const getHomeOtherJobs = async() => {
   
   export const getMoreEngineeringJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    console.log(priorityString)
     const data = await faunaClient.query(
       q.Map(
         q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "engineering"), {
@@ -197,24 +196,23 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
 
   export const getMoreCommercialJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
-      const data = await faunaClient.query(
-        q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "commercial"), {
-            size: size,
-            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
-          }),
-          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
-        )
+    const data = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "commercial"), {
+          size: size,
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
+        }),
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
-      
-      return data;
+    )
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
+    return data;
   }
   
   export const getProductJobs = async() => {
@@ -226,23 +224,22 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
   
   export const getMoreProductJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
         q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "product"), {
           size: size,
-          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
         }),
         (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
-    
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
     return data;
   }
 
@@ -255,24 +252,23 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
 
   export const getMoreClinicalJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
-      const data = await faunaClient.query(
-        q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "clinical"), {
-            size: size,
-            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
-          }),
-          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
-        )
+    const data = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "clinical"), {
+          size: size,
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
+        }),
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
-      
-      return data;
+    )
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
+    return data;
   }
   
   export const getDataJobs = async() => {
@@ -284,23 +280,22 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
   
   export const getMoreDataJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
         q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "data"), {
           size: size,
-          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
         }),
         (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
-    
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
     return data;
   }
 
@@ -313,24 +308,23 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
 
   export const getMoreMarketingJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
-      const data = await faunaClient.query(
-        q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "marketing"), {
-            size: size,
-            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
-          }),
-          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
-        )
+    const data = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "marketing"), {
+          size: size,
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
+        }),
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
-      
-      return data;
+    )
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
+    return data;
   }
   
   export const getLegalHrFinJobs = async() => {
@@ -342,23 +336,22 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
   
   export const getMoreLegalHrFinJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
     const data = await faunaClient.query(
       q.Map(
         q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "legalhrfin"), {
           size: size,
-          after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
         }),
         (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
     )
-    
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
     return data;
   }
 
@@ -371,23 +364,22 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
 
   export const getMoreCustomerSupportOpsJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
       const data = await faunaClient.query(
         q.Map(
           q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "customersupportops"), {
             size: size,
-            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
+            after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
           }),
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
   }
 
@@ -400,23 +392,22 @@ export const getHomeOtherJobs = async() => {
           (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
         )
       )
-      
+      data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
       return data;
     }
 
   export const getMoreOtherJobs = async(id, priorityString, featuredString) => {
     const featured = booleanParse(featuredString)
-    const priority = parseInt(priorityString)
-      const data = await faunaClient.query(
-        q.Map(
-          q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "other"), {
-            size: size,
-            after: [featured, priority, q.Ref(q.Collection("jobs"), id)]
-          }),
-          (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
-        )
+    const data = await faunaClient.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index(jobsByCategoryLatestFeaturedFirst), "other"), {
+          size: size,
+          after: [featured,q.ToTime(priorityString), q.Ref(q.Collection("jobs"), id)]
+        }),
+        (featured, priority, ref) => q.Merge(q.Select(["data"], q.Get(ref)), {id: ref })
       )
-
-      return data;
+  )
+    data.after[1] = ((data.after[1].toString()).replace( /(^.*\(|\).*$)/g, '' ).replace( "\"",'')).replace( "\"",'')
+    return data;
   }
   
