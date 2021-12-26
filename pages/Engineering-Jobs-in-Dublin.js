@@ -1,9 +1,9 @@
 import React  from 'react'
-import Layout from '../../components/Layout'
+import Layout from '../components/Layout'
 import { InstantSearch, SearchBox, ClearRefinements, RefinementList,Panel,ToggleRefinement, Pagination} from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite';
 import Head from 'next/head'
-import JobList from '../../components/JobList';
+import JobList from '../components/JobList';
 import { connectHits } from 'react-instantsearch-dom';
 import { useRef } from 'react'
 import Link from 'next/link';
