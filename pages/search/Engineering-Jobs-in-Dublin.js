@@ -248,9 +248,14 @@ Page.getInitialProps = async () => ({
   indexName: "jobs",
   // You may want to set some default searchState.
   // This will be merged on to state from the url.
+ 
   searchState: {
-   query: ""
+    query: "Dublin",
+    refinementList: {
+      category: ["engineering"]
+    },
   },
+
 });
 
 export default withInstantSearch({
