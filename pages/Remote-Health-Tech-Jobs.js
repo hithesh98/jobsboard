@@ -275,8 +275,8 @@ Page.getInitialProps = async () => ({
   // This will be merged on to state from the url.
 
   searchState: {
-    refinementList: {
-      category: ["remote"],
+    ToggleRefinement: {
+      remote: ["true"],
     },
   },
 });
