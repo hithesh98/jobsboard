@@ -276,7 +276,7 @@ Page.getInitialProps = async () => ({
 
   searchState: {
     ToggleRefinement: {
-      remote: ["true"],
+      remote,
     },
   },
 });
