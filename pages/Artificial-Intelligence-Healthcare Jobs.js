@@ -89,11 +89,11 @@ function categoryRename(label) {
 const Page = () => (
   <>
     <Head>
-      <title>New York Health Technology Jobs</title>
+      <title>Artificial Intelligence in Healthcare Jobs</title>
     </Head>
     <Layout>
       <header className="header">
-        <h1>Health Tech Jobs in New York</h1>
+        <h1>AI/Artificial Intelligence Healthcare Jobs</h1>
         <SearchBox
           searchAsYouType={false}
           translations={{
@@ -275,7 +275,7 @@ Page.getInitialProps = async () => ({
   // This will be merged on to state from the url.
 
   searchState: {
-    query: "New York",
+    query: "Ai",
   },
 });
 
