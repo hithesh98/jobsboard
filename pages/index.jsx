@@ -24,6 +24,14 @@ export default function Home() {
                     <form action="https://jobsinhealthtech.us6.list-manage.com/subscribe/post?u=30087181452091fa46daaef74&amp;id=13a887731e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                         <div id={styles.mc_embed_signup_scroll}>
                           <input type="email" name="EMAIL" className="email" id={styles.mceEMAIL} placeholder="Email Address" required/>
+                        <div className="styles.mc-field-group">
+                          <label htmlFor="mce-ALERT">Job Alert Frequency <span className="semi-colon">: </span>
+                        </label>
+                          <select name="ALERT" className="required" id={styles.mceALERT}>
+                          <option value="Daily">Daily</option>
+                          <option value="Weekly">Weekly</option>
+                          </select>
+                        </div>
                           <div className={styles.clear}><input type="submit" value="Subscribe" name="subscribe" id={styles.mcEmbeddedSubscribe} className="button"/></div>
                         </div>
                     </form>
