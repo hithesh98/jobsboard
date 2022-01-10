@@ -55,6 +55,8 @@
 #mceALERT {
     background-color: #ebe9f2;
     border-color: #C4C4C4;
+    border-radius: 4px;
+    padding: 3px;
 }
 
 .clear {
