@@ -75,6 +75,38 @@ export default function Layout({children}) {
                 {children}
             </div>
             <footer className='footer'>
+                <div className='landingPageWrapper'>
+                    <Link href="/Health-Tech-Jobs-Dublin">
+                    <a className='landingPage'>
+                        Health Tech Jobs in Dublin
+                    </a>
+                    </Link>
+                    <Link href="/Health-Tech-Jobs-London">
+                    <a className='landingPage'>
+                        Health Tech Jobs in London
+                    </a>
+                    </Link>
+                    <Link href="/Health-Tech-Jobs-New-York">
+                    <a className='landingPage'>
+                        Health Tech Jobs in New York
+                    </a>
+                    </Link>
+                    <Link href="/Artificial-Intelligence-Healthcare-Jobs">
+                    <a className='landingPage'>
+                        Artificial Intelligence Healthcare Jobs
+                    </a>
+                    </Link>
+                    <Link href="/Remote-Health-Tech-Jobs">
+                    <a className='landingPage'>
+                        Remote Health Tech Jobs
+                    </a>
+                    </Link>
+                    <Link href="/Telemedicine-Jobs">
+                    <a className='landingPage'>
+                        Telemedicine Jobs
+                    </a>
+                    </Link>
+                </div>
                 <nav className="navbarFooter">
                     <div className='nameFooter'>
                         <h3>JobsinHealthTech.com </h3>

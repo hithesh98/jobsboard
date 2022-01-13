@@ -147,6 +147,17 @@ ol{
     margin: 2.5em 0 0 0;
 }
 
+.landingPageWrapper{
+  display: grid;
+  justify-content: center;
+  max-width: 1300px;
+  margin: auto;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 300px));
+  padding: 3rem 0;
+   border-bottom: grey dashed 1px;
+}
+
 .hamburger{
   display: none;
 }
