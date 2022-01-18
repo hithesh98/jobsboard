@@ -19,7 +19,6 @@ export default function HomeJobPage({category}) {
     const capCategory = category[0].toUpperCase() + category.slice(1);
     
     if (!data) return "Loading..."
-    console.log(data)
     if(category === 'customersupportops'){
         return (
             <div className={styles.homeCategoryWrapper}>
