@@ -10,7 +10,7 @@ export default function resources() {
     </Head>
     <Layout>
         <div className={styles.resourcesWrap}>
-            <h1>Resources to checkout</h1>
+            <h1>Resources to check out</h1>
             <h2>Newsletters/blogs📩</h2>
             <ul>
                 <li><a href="https://www.outofpocket.health/">Out-of-pocket</a></li>
