@@ -1,0 +1,10 @@
+.resourcesWrap{
+    text-align: left;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 2rem ;
+}
+
+.resourcesWrap li {
+    list-style: disc;
+}
