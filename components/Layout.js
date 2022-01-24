@@ -37,6 +37,12 @@ export default function Layout({children}) {
                             Blog
                         </a>
                     </Link> 
+
+                    <Link href="/resources">
+                        <a className="search">
+                            Resources
+                        </a>
+                    </Link> 
                                      
                     <Link href="/search">         
 
