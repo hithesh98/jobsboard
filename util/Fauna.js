@@ -8,7 +8,7 @@ const jobsByCategoryLatestFeaturedFirst =
 // The number of jobs shown on home page.
 const homeSize = 5;
 // The number of jobs shown per category page.
-const size = 20;
+const size = 8;
 
 // Boolean check
 function booleanParse(boolString) {
@@ -459,7 +459,6 @@ export const getMarketingJobs = async () => {
     .replace(/(^.*\(|\).*$)/g, "")
     .replace('"', "")
     .replace('"', "");
-  return data;
 };
 
 export const getMoreMarketingJobs = async (
@@ -506,6 +505,7 @@ export const getLegalHrFinJobs = async () => {
         q.Merge(q.Select(["data"], q.Get(ref)), { id: ref })
     )
   );
+
   data.after[1] = data.after[1]
     .toString()
     .replace(/(^.*\(|\).*$)/g, "")
