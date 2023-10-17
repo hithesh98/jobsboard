@@ -32,11 +32,7 @@ export default function Layout({children}) {
 
 
                 <div className={mobileMenuActive ? 'mobileMenu active' : 'mobileMenu'} >  
-                    <Link href="/blog/page/1">
-                        <a className="search">
-                            Blog
-                        </a>
-                    </Link> 
+
 
                     <Link href="/resources">
                         <a className="search">

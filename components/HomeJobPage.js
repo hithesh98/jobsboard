@@ -83,7 +83,7 @@ export default function HomeJobPage({ category }) {
   return (
     <div className={styles.homeCategoryWrapper}>
       {data.map((pages) => {
-        return pages.data.map((job) => {
+        return pages.data?.map((job) => {
           const title = job.jobTitle.toLowerCase().replace(/[(), /]/g, "-");
           const company = job.companyName
             .toLowerCase()
